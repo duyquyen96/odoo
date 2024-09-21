@@ -59,13 +59,14 @@
                 </main>
                 <footer t-cache="no_footer,no_copyright" t-if="not no_footer" id="bottom" data-anchor="true" t-attf-class="bg-light o_footer">
                     <div id="footer"/>
+                    <div style="width: 100%; height: 0.05px; background-color: #BDBDBD;"></div>
                     <div t-if="not no_copyright" class="o_footer_copyright">
                         <div class="container py-3">
-                            <div class="row">
-                                <div class="col-sm text-center text-sm-start text-muted">
-                                    <span class="o_footer_copyright_name me-2">Copyright &amp;copy; <span t-field="res_company.name" itemprop="name">Company name</span></span>
+                            <div class="row justify-content-center">
+                                <div class="col-sm-auto text-center">
+                                    <span class="o_footer_copyright_name me-2">Copyright © 2021. All Rights Reserved.</span>
                                 </div>
-                                <div class="col-sm text-center text-sm-end">
+                                <div class="col-sm-auto text-center" style="display: none;">
                                     <t t-call="web.brand_promotion"/>
                                 </div>
                             </div>

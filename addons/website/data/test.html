@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .left-section {
+            flex: 1;
+            background-image: url('path/to/your/image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 40px;
+            position: relative;
+        }
+        .left-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 51, 0.7);
+        }
+        .left-content {
+            position: relative;
+            z-index: 1;
+        }
+        .right-section {
+            flex: 1;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            margin-top: 40px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #ff9800;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #9acd32;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-section">
+        <div class="left-content">
+            <h1>Liên hệ ngay</h1>
+            <p>Cảm ơn bạn đã ghé thăm. Hãy liên hệ với chúng tôi nếu bạn có bất kỳ câu hỏi nào.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">@</div>
+                    <div>example@email.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">☎</div>
+                    <div>03-4405-5555</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>123 Đường ABC, Thành phố XYZ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-section">
+        <h2>Mẫu liên hệ</h2>
+        <form>
+            <input type="text" placeholder="Họ và tên" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Số điện thoại">
+            <textarea rows="5" placeholder="Nội dung" required></textarea>
+            <button type="submit">Gửi</button>
+        </form>
+    </div>
+</body>
+</html>
