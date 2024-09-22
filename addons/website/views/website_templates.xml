@@ -903,18 +903,6 @@
                                 <t t-set="link_class" t-valuef="nav-link"/>
                             </t>
                         </t>
-                        <!-- Sign In -->
-                        <t t-call="portal.placeholder_user_sign_in">
-                            <t t-set="_item_class" t-valuef="nav-item ms-lg-3"/>
-                            <t t-set="_link_class" t-valuef="nav-link"/>
-                        </t>
-                        <!-- User Dropdown -->
-                        <t t-call="portal.user_dropdown">
-                            <t t-set="_user_name" t-value="True"/>
-                            <t t-set="_user_name_class" t-valuef="fw-bold"/>
-                            <t t-set="_item_class" t-valuef="nav-item dropdown ms-lg-3"/>
-                            <t t-set="_link_class" t-valuef="nav-link"/>
-                        </t>
                     </t>
                     <!-- Language Selector -->
                     <t t-call="website.placeholder_header_language_selector">
@@ -935,20 +923,24 @@
         <div class="oe_structure oe_structure_solo" id="oe_structure_header_contact_1">
             <section style="background-color: #213C8D; !important" class="s_text_block pt8 pb8 o_cc o_cc2" data-snippet="s_text_block" data-name="Text">
                 <div class="container">
-                    <div class="d-flex justify-content-center">
-                        <div class="text-white" style="font-size: 18px; font-weight: 400;">
-                            <span class="me-3">
+                    <div class="row">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <div class="text-white text-center text-md-start" style="font-size: 18px; font-weight: 400;">
                                 <i class="fa fa-envelope fa-fw me-2"></i>
                                 <a href="mailto:info@yourcompany.example.com" class="text-white">info@yourcompany.example.com</a>
-                            </span>
-                            <span class="me-3">
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <div class="text-white text-center" style="font-size: 18px; font-weight: 400;">
                                 <i class="fa fa-phone fa-fw me-2"></i>
                                 <a href="tel:+1 555-555-5556" class="text-white">+1 555-555-5556</a>
-                            </span>
-                            <span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-white text-center text-md-end" style="font-size: 18px; font-weight: 400;">
                                 <i class="fa fa-map-marker fa-fw me-2"></i>
                                 <a href="#" class="text-white">〒110-0005 東京都台東区上野2-12-18</a>
-                            </span>
+                            </div>
                         </div>
                     </div>
                 </div>

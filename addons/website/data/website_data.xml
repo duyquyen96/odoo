@@ -3,7 +3,7 @@
     <!-- Group multi website -->
     <record id="group_multi_website" model="res.groups">
         <field name="name">Multi-website</field>
-        <field name="category_id" ref="base.module_category_hidden"/>
+        <field name="category_id" ref="base.module_category_hidden" />
     </record>
 
     <!-- Action Jump on website action -->
@@ -17,303 +17,563 @@
     <!-- Template for home and contactus -->
     <template id="website.homepage" name="Home">
         <t t-call="website.layout">
-            <t t-set="pageName" t-value="'homepage'"/>
+            <t t-set="pageName" t-value="'homepage'" />
             <div id="wrap" class="oe_structure oe_empty">
-            <section class="s_video_banner" data-snippet="s_video_banner">
-                <div class="container-fluid p-0">
-                    <div class="row no-gutters">
-                        <div class="col-12">
-                            <div class="s_video_banner_video_container position-relative w-100">
-                                <video class="s_video_banner_video w-100 h-100 object-fit-cover" autoplay="autoplay" loop="loop" muted="muted">
-                                    <source src="/website/static/src/video/banner.mp4" type="video/mp4"/>
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="my-5">
-                <div class="container">
-                    <h2 class="mb-4" style="font-size: 48px; font-weight: bold;">私たちについて</h2>
-                </div>
-                <img src="/website/static/src/img/custom/banner1.png" alt="About Us"
-                                class="img-fluid rounded w-100"
-                                style="height: 33.33vw; object-fit: cover;" />
-            </section>
-
-            <!-- <section class="s_text_image" data-snippet="s_text_image" data-name="Text - Image" style="margin-top: 60px; margin-bottom: 60px;">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <h2 style="font-size: 32px; font-weight: 600;">ミッション</h2>
-                            <h3 style="font-size: 16px; font-weight: 600;">豊富な人的リソースの提供</h3>
-                            <p style="font-size: 16px; font-weight: 400;">
-                                深刻な人口減少と少子高齢化によりホテルの客室清掃をする人々の数は減少してます。
-                                事実、清掃業というのはネガティブなイメージが先行しやすいかもしれません。しか
-                                し客室清掃という仕事は日本の観光業を下支えする必要不可欠な仕事です。一つの部
-                                屋の清掃でも心遣い一つでお客様の笑顔を勧造出来ます。また限られた時間で客室を
-                                綺麗に磨き上げる姿は正に清掃の達人です。
-                            </p>
-                            <p style="font-size: 16px; font-weight: 400;">
-                                INVIAMのミッションは客室清掃という仕事をスタイリッシュでプロフェッショナルだ
-                                という価値観に一新する事です。今後益々盛り上がる観光業を支える陰の立役者であ
-                                る客室清掃業の社会的評価を上げ、携わってくれるスタッフを増やす。スタッフが豊
-                                富であればホテルの稼働率の問題も解決します。内需もインバウンドも受け入れられ
-                                機会損失も無くなります。
-                            </p>
-                            <p style="font-size: 16px; font-weight: 400;">
-                                INVIAMは、業界そのものイメージを塗り替え観光業の振興に携わるそんな集団を目指
-                                します。
-                            </p>
-                            <p style="font-size: 16px; font-weight: 400;">
-                                豊富な人的リソースと確かな清掃技術で日本を代表する客室清掃会社を目指します。
-                            </p>
-                        </div>
-                        <div class="col-lg-6 d-flex justify-content-end">
-                            <img src="/website/static/src/img/custom/ct1.png" alt="Mission" class="img-fluid" style="width: 100%; object-fit: cover;" />
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-            <section class="s_text_image" data-snippet="s_text_image" data-name="Text - Image" style="margin-top: 60px; margin-bottom: 60px;">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <h2 style="font-size: 32px; font-weight: 600;">バリュー</h2>
-                            <h3 style="font-size: 16px; font-weight: 600;">ベトナム現地採用、確かな育成</h3>
-                            <p style="font-size: 16px; font-weight: 400;">
-                                当社はベトナムから現地採用します。当社の現地法人での数ヶ月に渡る研修を経て各地にスタッフを配属します。一から当社のマニュアルのもと教育することでスタッフの共通理解を深めます。「one room、your happy」の精神のもと宿泊者様の入室から退室までの間の快適さを想像し日々清掃します。
-
-                            </p>
-                        </div>
-                        <div class="col-lg-6 d-flex justify-content-end">
-                            <img src="/website/static/src/img/custom/ct2.png" alt="Mission" class="img-fluid" style="width: 100%; object-fit: cover;" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="s_text_image" data-snippet="s_text_image" data-name="Text - Image">
-                <div class="container">
-                    <div class="mb-4" style="font-size: 48px; font-weight: 600;">なぜ当社のクリーニングサービスを選ぶ必要<br/>があるのですか？</div>
-                    <div class="mb-4">
-                        <img src="/website/static/src/img/custom/banner2.png"
-                            alt="Dịch vụ dọn dẹp" class="img-fluid"
-                            style="width: 100%; height: 400px; object-fit: cover;" />
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div style="font-size: 22px; font-weight: 600;">若くて健康で熱心なチーム:</div>
-                            <p style="font-size: 20px; font-weight: 400;"> 健康で機敏であるという利点を備えたベトナムの若者と、高齢でありながら仕事への熱意に満ちた人を主に採用しています。 </p>
-                        </div>
-                        <div class="col-md-3">
-                            <div style="font-size: 22px; font-weight: 600;">迅速かつ経済的</div>
-                            <p style="font-size: 20px; font-weight: 400;">顧客のリクエストや変更に迅速に対応します。手頃な価格と各サービスの絶対的な満足への取り組み。</p>
-                        </div>
-                        <div class="col-md-3">
-                            <div style="font-size: 22px; font-weight: 600;">質の高いサービス</div>
-                            <p style="font-size: 20px; font-weight: 400;"> 安全で強力な洗浄製品のみを使用します。</p>
-                        </div>
-                        <div class="col-md-3">
-                            <div style="font-size: 22px; font-weight: 600;">プロフェッショナルチーム</div>
-                            <p style="font-size: 20px; font-weight: 400;">当社のスタッフは全員、厳しく徹底的なトレーニングを受けています。</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="my-5" style="background-color: #F7F7F7; padding-bottom: 0px !important;">
-                <div class="container py-5">
-                    <h2 class="mb-5" style="font-size: 48px; font-weight: bold;">サービス開始までの流れ</h2>
-                    <div class="row justify-content-center mb-5">
-                        <div class="col-lg-12">
-                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                                <div class="text-center mb-4 mb-md-0">
-                                    <div
-                                        class="rounded-circle text-white d-flex align-items-center justify-content-center mx-auto mb-3 step-circle active"
-                                        style="background-color: #B1D315; width: 180px; height: 180px; border: 12px solid white; outline: 6px solid #B1D315;"
-                                        data-step="1">
-                                        <span class="h3 mb-0" style="font-size: 60px; font-weight: bold;">01</span>
-                                    </div>
-                                    <p class="mb-0" style="font-size: 18px; font-weight: 600;">ヒアリング・現場見学 </p>
-                                </div>
-                                <div class="d-none d-md-flex flex-grow-1 mx-3 justify-content-center">
-                                    <img src="/website/static/src/img/custom/arrow.svg" alt="Arrow" class="img-fluid" />
-                                </div>
-                                <div class="text-center mb-4 mb-md-0">
-                                    <div
-                                        class="rounded-circle text-white d-flex align-items-center justify-content-center mx-auto mb-3 step-circle"
-                                        style="background-color: #9E9E9E; width: 180px; height: 180px; border: 12px solid white; outline: 6px solid #9E9E9E;"
-                                        data-step="2">
-                                        <span class="h3 mb-0" style="font-size: 60px; font-weight: bold;">02</span>
-                                    </div>
-                                    <p class="mb-0" style="font-size: 18px; font-weight: 600;">ご提案</p>
-                                </div>
-                                <div class="d-none d-md-flex flex-grow-1 mx-3 justify-content-center align-items-center">
-                                    <img src="/website/static/src/img/custom/arrow.svg" alt="Arrow" class="img-fluid" />
-                                </div>
-                                <div class="text-center mb-4 mb-md-0">
-                                    <div
-                                        class="rounded-circle text-white d-flex align-items-center justify-content-center mx-auto mb-3 step-circle"
-                                        style="background-color: #9E9E9E; width: 180px; height: 180px; border: 12px solid white; outline: 6px solid #9E9E9E;"
-                                        data-step="3">
-                                        <span class="h3 mb-0" style="font-size: 60px; font-weight: bold;">03</span>
-                                    </div>
-                                    <p class="mb-0" style="font-size: 18px; font-weight: 600;">サービス提供開始</p>
-                                </div>
-                                <div class="d-none d-md-flex flex-grow-1 mx-3 justify-content-center align-items-center">
-                                    <img src="/website/static/src/img/custom/arrow.svg" alt="Arrow" class="img-fluid" />
-                                </div>
-                                <div class="text-center">
-                                    <div
-                                        class="rounded-circle text-white d-flex align-items-center justify-content-center mx-auto mb-3 step-circle"
-                                        style="background-color: #9E9E9E; width: 180px; height: 180px; border: 12px solid white; outline: 6px solid #9E9E9E;"
-                                        data-step="4">
-                                        <span class="h3 mb-0" style="font-size: 60px; font-weight: bold;">04</span>
-                                    </div>
-                                    <p class="mb-0" style="font-size: 18px; font-weight: 600;">受け入れ検査</p>
+                <section class="s_video_banner" data-snippet="s_video_banner">
+                    <div class="container-fluid p-0">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <div class="s_video_banner_video_container position-relative w-100">
+                                    <video class="s_video_banner_video w-100 h-100 object-fit-cover"
+                                        autoplay="autoplay" loop="loop" muted="muted">
+                                        <source src="/website/static/src/video/banner.mp4"
+                                            type="video/mp4" /> Your browser does not support the
+                                        video tag. </video>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </section>
 
-                    <div id="stepContent" class="row align-items-center bg-white">
-                        <div class="col-lg-8" style="padding: 50px;">
-                            <h2 id="stepTitle" class="mb-4" style="font-size: 32px; font-weight: bold;">ヒアリング・現場見学 </h2>
-                            <p id="stepDescription" class="mb-4">サービスの詳細について、またはご相談の予約をするには、今すぐお問い合わせください。
-                                まずはこれまでの客室清掃オペレーションや課 題感などを詳しくヒアリングさせていただきま す。また、より解像度高く現場を理解するため に、現場を見学させていただきます。</p>
-                            <a href="/contactus" style="color: #fff !important" class="btn btn-primary px-4 py-2">今すぐ連絡する</a>
-                        </div>
-                        <div class="col-lg-4 p-0">
-                            <img id="stepImage" src="/website/static/src/img/custom/banner3.png" alt="Contact Us"
-                                class="img-fluid rounded w-100"
-                                style="height: 320px; object-fit: cover;" />
-                        </div>
+
+                <section style="margin-top: 60px">
+                    <div class="container">
+                        <h2
+                            style="font-size: 48px; font-weight: bold; color: #2F4672; margin-bottom: 60px;">
+                            私たちについて</h2>
                     </div>
-                </div>
-            </section>
+                    <img src="/website/static/src/img/custom/banner1.png" alt="About Us"
+                        class="img-fluid rounded w-100"
+                        style="height: 33.33vw; object-fit: cover;" />
+                </section>
 
-            <section class="s_cover parallax s_parallax_is_fixed pt48 pb40 position-relative"
-            data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover">
-            <span class="s_parallax_bg oe_img_bg"
-                style="background-image: url('/website/static/src/img/custom/banner1.png'); background-position: 50% 0;" />
-            <div class="o_we_bg_filter bg-black-50" />
-            <div class="container position-relative">
-                <div class="row s_nb_column_fixed">
-                    <div class="col-lg-6 text-white d-flex flex-column justify-content-center align-items-start">
-                        <h2 style="font-size: 48px; font-weight: bold;">今すぐ連絡する</h2>
-                        <p style="font-size: 16px; font-weight: 400;">ありがとう。皆様のご利用をお待ちしております。また近いうちにお会いしましょう、.</p>
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="fa-stack me-3" style="width: 50px; height: 50px;">
-                                <i class="fa fa-circle fa-stack-2x" style="color: #f39c12; font-size: 50px;"></i>
-                                <i class="fa fa-clock-o fa-stack-1x" style="color: white; font-size: 24px; line-height: 50px;"></i>
-                            </span>
-                            <div>
-                                <p class="mb-0" style="color: rgb(255, 255, 255);">
-                                    <strong style="font-size: 16px; font-weight: 400;">Gメール</strong><br />
-                                    <span style="font-size: 16px; font-weight: 400;">Inviam.co.ltd@gmail.com</span>
+                <section class="s_text_image" data-snippet="s_text_image" data-name="Text - Image"
+                    style="margin-top: 60px; margin-bottom: 60px;">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h2 style="font-size: 32px; font-weight: 600;">バリュー</h2>
+                                <h3 style="font-size: 16px; font-weight: 600;">ベトナム現地採用、確かな育成</h3>
+                                <p style="font-size: 16px; font-weight: 400;">
+                                    当社はベトナムから現地採用します。当社の現地法人での数ヶ月に渡る研修を経て各地にスタッフを配属します。一から当社のマニュアルのもと教育することでスタッフの共通理解を深めます。「one
+                                    room、your happy」の精神のもと宿泊者様の入室から退室までの間の快適さを想像し日々清掃します。
+
                                 </p>
                             </div>
-                        </div>
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="fa-stack me-3" style="width: 50px; height: 50px;">
-                                <i class="fa fa-circle fa-stack-2x" style="color: #f39c12; font-size: 50px;"></i>
-                                <i class="fa fa-phone fa-stack-1x" style="color: white; font-size: 24px; line-height: 50px;"></i>
-                            </span>
-                            <div>
-                                <p class="mb-0" style="color: rgb(255, 255, 255);">
-                                    <strong style="font-size: 16px; font-weight: 400;">電話番号</strong><br />
-                                    <span style="font-size: 16px; font-weight: 400;">０３－４４０５－５５５５</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <span class="fa-stack me-3" style="width: 50px; height: 50px;">
-                                <i class="fa fa-circle fa-stack-2x" style="color: #f39c12; font-size: 50px;"></i>
-                                <i class="fa fa-map-marker fa-stack-1x" style="color: white; font-size: 24px; line-height: 50px;"></i>
-                            </span>
-                            <div>
-                                <p class="mb-0" style="color: rgb(255, 255, 255);">
-                                    <strong style="font-size: 16px; font-weight: 400;">所在地</strong><br />
-                                    <span style="font-size: 16px; font-weight: 400;">〒110-0005<br />
-                                        東京都台東区上野2-12-18</span>
-                                </p>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <img src="/website/static/src/img/custom/ct2.png" alt="Mission"
+                                    class="img-fluid" style="width: 100%; object-fit: cover;" />
                             </div>
                         </div>
                     </div>
-                    <!-- Cột bên phải -->
-                    <div class="col-lg-6">
-                        <div class="bg-white p-4 rounded">
-                            <h3 class="mb-4" style="font-size: 48px; font-weight: bold;">コンタクトフォーム</h3>
-                            <form id="contactus_form" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-pre-fill="true">
-                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                <div class="row mb-3">
-                                    <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control border-0" name="company" placeholder="(任意)御社名" style="background-color: #EFEFEF;" />
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control border-0" name="name" placeholder="(必須) お名前" required="" style="background-color: #EFEFEF;" />
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control border-0" name="furigana" placeholder="(必須)ふりがな" required="" style="background-color: #EFEFEF;" />
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control border-0" name="job_title" placeholder="(任意)身位" style="background-color: #EFEFEF;" />
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control border-0" name="email_from" placeholder="(必須) メールアドレス" required="" style="background-color: #EFEFEF;" />
-                                </div>
-                                <div class="mb-3">
-                                    <input type="tel" class="form-control border-0" name="phone" placeholder="(必須)TEL" required="" style="background-color: #EFEFEF;" />
-                                </div>
-                                <div class="mb-3">
-                                    <input type="tel" class="form-control border-0" name="fax" placeholder="(任意)FAX" style="background-color: #EFEFEF;" />
-                                </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control border-0" name="description" rows="4" placeholder="(必須)お問い合わせ内容" required="" style="background-color: #EFEFEF;"></textarea>
-                                </div>
-                                <input type="hidden" name="subject" value="Contact Form Submission" />
-                                <input type="hidden" name="email_to" t-att-value="res_company.email" />
-                                <p class="mb-3" style="font-size: 16px; font-weight: 400;">(必須)プライバシー ポリシー , プライバシーポリシーを確認し、内 容に同意します。</p>
-                                <div>
-                                    <button type="submit" class="btn btn-primary s_website_form_send" style="font-size: 18px; font-weight: 400; color: white;">情報の送信</button>
-                                </div>
-                            </form>
+                </section>
+
+                <section class="s_text_image" data-snippet="s_text_image" data-name="Text - Image">
+                    <div class="container">
+                        <div class="mb-4" style="font-size: 48px; font-weight: 600;">
+                            なぜ当社のクリーニングサービスを選ぶ必要<br />があるのですか？</div>
+                        <div class="mb-4">
+                            <img src="/website/static/src/img/custom/banner2.png"
+                                alt="Dịch vụ dọn dẹp" class="img-fluid"
+                                style="width: 100%; height: 400px; object-fit: cover;" />
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div style="font-size: 22px; font-weight: 600;">若くて健康で熱心なチーム:</div>
+                                <p style="font-size: 20px; font-weight: 400; color: #474747;">
+                                    健康で機敏であるという利点を備えたベトナムの若者と、高齢でありながら仕事への熱意に満ちた人を主に採用しています。 </p>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="font-size: 22px; font-weight: 600;">迅速かつ経済的</div>
+                                <p style="font-size: 20px; font-weight: 400; color: #474747;">
+                                    顧客のリクエストや変更に迅速に対応します。手頃な価格と各サービスの絶対的な満足への取り組み。</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="font-size: 22px; font-weight: 600;">質の高いサービス</div>
+                                <p style="font-size: 20px; font-weight: 400; color: #474747;">
+                                    安全で強力な洗浄製品のみを使用します。</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="font-size: 22px; font-weight: 600;">プロフェッショナルチーム</div>
+                                <p style="font-size: 20px; font-weight: 400; color: #474747;">
+                                    当社のスタッフは全員、厳しく徹底的なトレーニングを受けています。</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
+
+                <section class="oe_structure" id="oe_structure_custom_section">
+                </section>
+
+                <section class="my-5"
+                    style="background-color: #F7F7F7; padding-bottom: 0px !important;">
+                    <div class="container py-5">
+                        <h2 class="mb-5" style="font-size: 48px; font-weight: bold;">サービス開始までの流れ</h2>
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-lg-12">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    <div class="text-center mb-4 mb-md-0">
+                                        <div
+                                            class="rounded-circle text-white d-flex align-items-center justify-content-center mx-auto mb-3 step-circle active"
+                                            style="background-color: #B1D315; width: 180px; height: 180px; border: 12px solid white; outline: 6px solid #B1D315;"
+                                            data-step="1">
+                                            <span class="h3 mb-0"
+                                                style="font-size: 60px; font-weight: bold;">01</span>
+                                        </div>
+                                        <p class="mb-0" style="font-size: 18px; font-weight: 600;">
+                                            ヒアリング・現場見学 </p>
+                                    </div>
+                                    <div
+                                        class="d-none d-md-flex flex-grow-1 mx-3 justify-content-center">
+                                        <img src="/website/static/src/img/custom/arrow.svg"
+                                            alt="Arrow" class="img-fluid" />
+                                    </div>
+                                    <div class="text-center mb-4 mb-md-0">
+                                        <div
+                                            class="rounded-circle text-white d-flex align-items-center justify-content-center mx-auto mb-3 step-circle"
+                                            style="background-color: #9E9E9E; width: 180px; height: 180px; border: 12px solid white; outline: 6px solid #9E9E9E;"
+                                            data-step="2">
+                                            <span class="h3 mb-0"
+                                                style="font-size: 60px; font-weight: bold;">02</span>
+                                        </div>
+                                        <p class="mb-0" style="font-size: 18px; font-weight: 600;">
+                                            ご提案</p>
+                                    </div>
+                                    <div
+                                        class="d-none d-md-flex flex-grow-1 mx-3 justify-content-center align-items-center">
+                                        <img src="/website/static/src/img/custom/arrow.svg"
+                                            alt="Arrow" class="img-fluid" />
+                                    </div>
+                                    <div class="text-center mb-4 mb-md-0">
+                                        <div
+                                            class="rounded-circle text-white d-flex align-items-center justify-content-center mx-auto mb-3 step-circle"
+                                            style="background-color: #9E9E9E; width: 180px; height: 180px; border: 12px solid white; outline: 6px solid #9E9E9E;"
+                                            data-step="3">
+                                            <span class="h3 mb-0"
+                                                style="font-size: 60px; font-weight: bold;">03</span>
+                                        </div>
+                                        <p class="mb-0" style="font-size: 18px; font-weight: 600;">
+                                            サービス提供開始</p>
+                                    </div>
+                                    <div
+                                        class="d-none d-md-flex flex-grow-1 mx-3 justify-content-center align-items-center">
+                                        <img src="/website/static/src/img/custom/arrow.svg"
+                                            alt="Arrow" class="img-fluid" />
+                                    </div>
+                                    <div class="text-center">
+                                        <div
+                                            class="rounded-circle text-white d-flex align-items-center justify-content-center mx-auto mb-3 step-circle"
+                                            style="background-color: #9E9E9E; width: 180px; height: 180px; border: 12px solid white; outline: 6px solid #9E9E9E;"
+                                            data-step="4">
+                                            <span class="h3 mb-0"
+                                                style="font-size: 60px; font-weight: bold;">04</span>
+                                        </div>
+                                        <p class="mb-0" style="font-size: 18px; font-weight: 600;">
+                                            受け入れ検査</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="stepContent" class="row align-items-center bg-white">
+                            <div class="col-lg-8" style="padding: 50px;">
+                                <h2 id="stepTitle" class="mb-4"
+                                    style="font-size: 32px; font-weight: bold;">ヒアリング・現場見学 </h2>
+                                <p id="stepDescription" class="mb-4">サービスの詳細について、またはご相談の予約をするには、今すぐお問い合わせください。
+                                    まずはこれまでの客室清掃オペレーションや課 題感などを詳しくヒアリングさせていただきま
+                                    す。また、より解像度高く現場を理解するため に、現場を見学させていただきます。</p>
+                                <a href="/contactus" style="color: #fff !important"
+                                    class="btn btn-primary px-4 py-2">今すぐ連絡する</a>
+                            </div>
+                            <div class="col-lg-4 p-0">
+                                <img id="stepImage" src="/website/static/src/img/custom/banner3.png"
+                                    alt="Contact Us"
+                                    class="img-fluid rounded w-100"
+                                    style="height: 320px; object-fit: cover;" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="s_cover parallax s_parallax_is_fixed pt48 pb40 position-relative"
+                    data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover">
+                    <span class="s_parallax_bg oe_img_bg"
+                        style="background-image: url('/website/static/src/img/custom/banner1.png'); background-position: 50% 0;" />
+                    <div class="o_we_bg_filter bg-black-50" />
+                    <div class="container position-relative">
+                        <div class="row s_nb_column_fixed">
+                            <div
+                                class="col-lg-6 text-white d-flex flex-column justify-content-center align-items-start">
+                                <h2 style="font-size: 48px; font-weight: bold;">今すぐ連絡する</h2>
+                                <p style="font-size: 16px; font-weight: 400;">
+                                    ありがとう。皆様のご利用をお待ちしております。また近いうちにお会いしましょう、.</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="fa-stack me-3" style="width: 50px; height: 50px;">
+                                        <i class="fa fa-circle fa-stack-2x"
+                                            style="color: #f39c12; font-size: 50px;"></i>
+                                        <i class="fa fa-clock-o fa-stack-1x"
+                                            style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                    </span>
+                                    <div>
+                                        <p class="mb-0" style="color: rgb(255, 255, 255);">
+                                            <strong style="font-size: 16px; font-weight: 400;">Gメール</strong>
+                                            <br />
+                                            <span style="font-size: 16px; font-weight: 400;">
+                                                Inviam.co.ltd@gmail.com</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="fa-stack me-3" style="width: 50px; height: 50px;">
+                                        <i class="fa fa-circle fa-stack-2x"
+                                            style="color: #f39c12; font-size: 50px;"></i>
+                                        <i class="fa fa-phone fa-stack-1x"
+                                            style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                    </span>
+                                    <div>
+                                        <p class="mb-0" style="color: rgb(255, 255, 255);">
+                                            <strong style="font-size: 16px; font-weight: 400;">電話番号</strong>
+                                            <br />
+                                            <span style="font-size: 16px; font-weight: 400;">
+                                                ０３－４４０５－５５５５</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="fa-stack me-3" style="width: 50px; height: 50px;">
+                                        <i class="fa fa-circle fa-stack-2x"
+                                            style="color: #f39c12; font-size: 50px;"></i>
+                                        <i class="fa fa-map-marker fa-stack-1x"
+                                            style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                    </span>
+                                    <div>
+                                        <p class="mb-0" style="color: rgb(255, 255, 255);">
+                                            <strong style="font-size: 16px; font-weight: 400;">所在地</strong>
+                                            <br />
+                                            <span style="font-size: 16px; font-weight: 400;">
+                                                〒110-0005<br /> 東京都台東区上野2-12-18</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Cột bên phải -->
+                            <div class="col-lg-6">
+                                <div class="bg-white p-4 rounded">
+                                    <h3 class="mb-4" style="font-size: 48px; font-weight: bold;">
+                                        コンタクトフォーム</h3>
+                                    <form id="contactus_form" action="/website/form/" method="post"
+                                        enctype="multipart/form-data" class="o_mark_required"
+                                        data-mark="*" data-model_name="mail.mail"
+                                        data-success-mode="redirect"
+                                        data-success-page="/contactus-thank-you"
+                                        data-pre-fill="true">
+                                        <input type="hidden" name="csrf_token"
+                                            t-att-value="request.csrf_token()" />
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="form-control border-0"
+                                                    name="company" placeholder="(任意)御社名"
+                                                    style="background-color: #EFEFEF;" />
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="form-control border-0"
+                                                    name="name" placeholder="(必須) お名前" required=""
+                                                    style="background-color: #EFEFEF;" />
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control border-0"
+                                                name="furigana" placeholder="(必須)ふりがな" required=""
+                                                style="background-color: #EFEFEF;" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control border-0"
+                                                name="job_title" placeholder="(任意)身位"
+                                                style="background-color: #EFEFEF;" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control border-0"
+                                                name="email_from" placeholder="(必須) メールアドレス"
+                                                required="" style="background-color: #EFEFEF;" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="tel" class="form-control border-0"
+                                                name="phone" placeholder="(必須)TEL" required=""
+                                                style="background-color: #EFEFEF;" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="tel" class="form-control border-0"
+                                                name="fax" placeholder="(任意)FAX"
+                                                style="background-color: #EFEFEF;" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <textarea class="form-control border-0"
+                                                name="description" rows="4"
+                                                placeholder="(必須)お問い合わせ内容" required=""
+                                                style="background-color: #EFEFEF;"></textarea>
+                                        </div>
+                                        <input type="hidden" name="subject"
+                                            value="Contact Form Submission" />
+                                        <input type="hidden" name="email_to"
+                                            t-att-value="res_company.email" />
+                                        <p class="mb-3" style="font-size: 16px; font-weight: 400;">(必須)プライバシー
+                                            ポリシー , プライバシーポリシーを確認し、内 容に同意します。</p>
+                                        <div>
+                                            <button type="submit"
+                                                class="btn btn-primary s_website_form_send"
+                                                style="font-size: 18px; font-weight: 400; color: white;">
+                                                情報の送信</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </t>
     </template>
+
+
+    <!-- Template for company profile -->
+    <template id="website.company_profile" name="Company Profile">
+        <t t-call="website.layout">
+            <t t-set="pageName" t-value="'company_profile'" />
+            <div id="wrap" class="oe_structure oe_empty">
+                <section>
+                    <img src="/website/static/src/img/custom/banner1.png" alt="About Us"
+                        class="img-fluid rounded w-100"
+                        style="height: 33.33vw; object-fit: cover;" />
+                </section>
+
+                <section>
+                    <div class="container">
+                        
+                        <div class="p-4 rounded" style="background-color: #ECF4C7;">
+                            <h2 class="text-center mb-4" style="font-size: 32px; font-weight: bold; color: #FFFFFF; background-color: #96B312; padding: 10px;">「会社概要」</h2>
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" style="width: 30%; font-size: 16px; font-weight: 400; color: black;">社名</th>
+                                        <td style="font-size: 16px; font-weight: 400; color: black; border-left: 1px dashed #000; padding-left: 24px;">株式会社INVIAM</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="font-size: 16px; font-weight: 400; color: black;">本店</th>
+                                        <td style="font-size: 16px; font-weight: 400; color: black; border-left: 1px dashed #000; padding-left: 24px;">東京都台東区上野二丁目12番18号</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="font-size: 16px; font-weight: 400; color: black;">事業内容</th>
+                                        <td style="font-size: 16px; font-weight: 400; color: black; border-left: 1px dashed #000; padding-left: 24px;">ホテル清掃請負<br/>民泊清掃</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="font-size: 16px; font-weight: 400; color: black;">資本金</th>
+                                        <td style="font-size: 16px; font-weight: 400; color: black; border-left: 1px dashed #000; padding-left: 24px;">500万円</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="font-size: 16px; font-weight: 400; color: black;">役員に関する事項</th>
+                                        <td style="font-size: 16px; font-weight: 400; color: black; border-left: 1px dashed #000; padding-left: 24px;">
+                                            代表取締役<br/>
+                                            寺崎董人<br/>
+                                            取締役<br/>
+                                            チャン・ティ・ビック・ゴック
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="font-size: 16px; font-weight: 400; color: black;">TEL</th>
+                                        <td style="font-size: 16px; font-weight: 400; color: black; border-left: 1px dashed #000; padding-left: 24px;">０３－４４０５－５５５５</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="font-size: 16px; font-weight: 400; color: black;">Gmail</th>
+                                        <td style="font-size: 16px; font-weight: 400; color: black; border-left: 1px dashed #000; padding-left: 24px;">Inviam.co.ltd@gmail.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="py-4">
+                    <div class="container">
+                        <div class="map_container o_not_editable pt8" contenteditable="false">
+                            <iframe class="s_map_embedded o_not_editable" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6963246511!2d105.81637631476292!3d21.007025393972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8109765ba5%3A0xd84740ece05680ee!2zVMOyYSBOaMOgIEZhZmltLCAxOSBOZ3V54buFbiBUcsOjaSwgS2jGsMahbmcgVHJ1bmcsIFRoYW5oIFh1w6JuLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1649669878242!5m2!1svi!2s" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="s_cover parallax s_parallax_is_fixed pt48 pb40 position-relative"
+                    data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover">
+                    <span class="s_parallax_bg oe_img_bg"
+                        style="background-image: url('/website/static/src/img/custom/banner1.png'); background-position: 50% 0;" />
+                    <div class="o_we_bg_filter bg-black-50" />
+                    <div class="container position-relative">
+                        <div class="row s_nb_column_fixed">
+                            <div
+                                class="col-lg-6 text-white d-flex flex-column justify-content-center align-items-start">
+                                <h2 style="font-size: 48px; font-weight: bold;">今すぐ連絡する</h2>
+                                <p style="font-size: 16px; font-weight: 400;">
+                                    ありがとう。皆様のご利用をお待ちしております。また近いうちにお会いしましょう、.</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="fa-stack me-3" style="width: 50px; height: 50px;">
+                                        <i class="fa fa-circle fa-stack-2x"
+                                            style="color: #f39c12; font-size: 50px;"></i>
+                                        <i class="fa fa-clock-o fa-stack-1x"
+                                            style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                    </span>
+                                    <div>
+                                        <p class="mb-0" style="color: rgb(255, 255, 255);">
+                                            <strong style="font-size: 16px; font-weight: 400;">Gメール</strong>
+                                            <br />
+                                            <span style="font-size: 16px; font-weight: 400;">
+                                                Inviam.co.ltd@gmail.com</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="fa-stack me-3" style="width: 50px; height: 50px;">
+                                        <i class="fa fa-circle fa-stack-2x"
+                                            style="color: #f39c12; font-size: 50px;"></i>
+                                        <i class="fa fa-phone fa-stack-1x"
+                                            style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                    </span>
+                                    <div>
+                                        <p class="mb-0" style="color: rgb(255, 255, 255);">
+                                            <strong style="font-size: 16px; font-weight: 400;">電話番号</strong>
+                                            <br />
+                                            <span style="font-size: 16px; font-weight: 400;">
+                                                ０３－４４０５－５５５５</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="fa-stack me-3" style="width: 50px; height: 50px;">
+                                        <i class="fa fa-circle fa-stack-2x"
+                                            style="color: #f39c12; font-size: 50px;"></i>
+                                        <i class="fa fa-map-marker fa-stack-1x"
+                                            style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                    </span>
+                                    <div>
+                                        <p class="mb-0" style="color: rgb(255, 255, 255);">
+                                            <strong style="font-size: 16px; font-weight: 400;">所在地</strong>
+                                            <br />
+                                            <span style="font-size: 16px; font-weight: 400;">
+                                                〒110-0005<br /> 東京都台東区上野2-12-18</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Cột bên phải -->
+                            <div class="col-lg-6">
+                                <div class="bg-white p-4 rounded">
+                                    <h3 class="mb-4" style="font-size: 48px; font-weight: bold;">
+                                        コンタクトフォーム</h3>
+                                    <form id="contactus_form" action="/website/form/" method="post"
+                                        enctype="multipart/form-data" class="o_mark_required"
+                                        data-mark="*" data-model_name="mail.mail"
+                                        data-success-mode="redirect"
+                                        data-success-page="/contactus-thank-you"
+                                        data-pre-fill="true">
+                                        <input type="hidden" name="csrf_token"
+                                            t-att-value="request.csrf_token()" />
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="form-control border-0"
+                                                    name="company" placeholder="(任意)御社名"
+                                                    style="background-color: #EFEFEF;" />
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="form-control border-0"
+                                                    name="name" placeholder="(必須) お名前" required=""
+                                                    style="background-color: #EFEFEF;" />
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control border-0"
+                                                name="furigana" placeholder="(必須)ふりがな" required=""
+                                                style="background-color: #EFEFEF;" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control border-0"
+                                                name="job_title" placeholder="(任意)身位"
+                                                style="background-color: #EFEFEF;" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control border-0"
+                                                name="email_from" placeholder="(必須) メールアドレス"
+                                                required="" style="background-color: #EFEFEF;" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="tel" class="form-control border-0"
+                                                name="phone" placeholder="(必須)TEL" required=""
+                                                style="background-color: #EFEFEF;" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="tel" class="form-control border-0"
+                                                name="fax" placeholder="(任意)FAX"
+                                                style="background-color: #EFEFEF;" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <textarea class="form-control border-0"
+                                                name="description" rows="4"
+                                                placeholder="(必須)お問い合わせ内容" required=""
+                                                style="background-color: #EFEFEF;"></textarea>
+                                        </div>
+                                        <input type="hidden" name="subject"
+                                            value="Contact Form Submission" />
+                                        <input type="hidden" name="email_to"
+                                            t-att-value="res_company.email" />
+                                        <p class="mb-3" style="font-size: 16px; font-weight: 400;">(必須)プライバシー
+                                            ポリシー , プライバシーポリシーを確認し、内 容に同意します。</p>
+                                        <div>
+                                            <button type="submit"
+                                                class="btn btn-primary s_website_form_send"
+                                                style="font-size: 18px; font-weight: 400; color: white;">
+                                                情報の送信</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+
     <template id="website.contactus" name="Contact Us">
         <t t-call="website.layout">
-            <t t-set="logged_partner" t-value="request.env['website.visitor']._get_visitor_from_request().partner_id"/>
-            <t t-set="contactus_form_values" t-value="{
+            <t t-set="logged_partner"
+                t-value="request.env['website.visitor']._get_visitor_from_request().partner_id" />
+            <t t-set="contactus_form_values"
+                t-value="{
                 'email_to': res_company.email,
                 'name': request.params.get('name', ''),
                 'phone': request.params.get('phone', ''),
                 'email_from': request.params.get('email_from', ''),
                 'company': request.params.get('company', ''),
                 'subject': request.params.get('subject', ''),
-            }"/>
-            <span class="hidden" data-for="contactus_form" t-att-data-values="contactus_form_values"/>
+            }" />
+            <span class="hidden" data-for="contactus_form" t-att-data-values="contactus_form_values" />
             <div id="wrap" class="oe_structure oe_empty" style="background-color: #EFEFEF;">
                 <section class="s_text_block pt40 pb40 o_colored_level" data-snippet="s_text_block">
-                    <div class="container s_allow_columns" style="background-color: #FFFFFF; border-radius: 16px; padding-top: 32px; padding-bottom: 32px;">
-                        <h1 class="text-center mb-4" style="font-size: 48px; font-weight: bold;">Phiếu thông tin</h1>
-                        <p class="text-center mb-5" style="font-size: 16px; font-weight: 400;">Vui lòng điền các thông tin được yêu cầu vào mẫu
+                    <div class="container s_allow_columns"
+                        style="background-color: #FFFFFF; border-radius: 16px; padding-top: 32px; padding-bottom: 32px;">
+                        <h1 class="text-center mb-4" style="font-size: 48px; font-weight: bold;">Phiếu
+                            thông tin</h1>
+                        <p class="text-center mb-5" style="font-size: 16px; font-weight: 400;">Vui
+                            lòng điền các thông tin được yêu cầu vào mẫu
                             bên dưới và nhấn nút gửi.</p>
                         <form id="contactus_form" action="/website/form/" method="post"
                             enctype="multipart/form-data" class="o_mark_required" data-mark="*"
                             data-model_name="mail.mail" data-success-mode="redirect"
                             data-success-page="/contactus-thank-you" data-pre-fill="true">
-                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <input type="hidden" name="csrf_token"
+                                t-att-value="request.csrf_token()" />
                             <div class="row mb-3">
                                 <div class="col-md-6 mb-3">
                                     <input type="text" class="form-control border-0" name="company"
@@ -345,21 +605,23 @@
                             </div>
                             <div class="mb-3">
                                 <textarea class="form-control border-0" name="description" rows="4"
-                                    placeholder="Ghi chú" style="background-color: #EFEFEF; border-radius: 0;"></textarea>
+                                    placeholder="Ghi chú"
+                                    style="background-color: #EFEFEF; border-radius: 0;"></textarea>
                             </div>
                             <input type="hidden" name="subject" value="Contact Form Submission" />
                             <input type="hidden" name="email_to" t-att-value="res_company.email" />
                             <p class="text-center mb-3">Màn hình xác nhận sẽ không được hiển thị vì
                                 vậy vui lòng kiểm tra kỹ thông tin trước khi gửi</p>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary s_website_form_send" style="color: white;">お問い合わせフォーム</button>
+                                <button type="submit" class="btn btn-primary s_website_form_send"
+                                    style="color: white;">お問い合わせフォーム</button>
                             </div>
                         </form>
-                        <div class="alert alert-info mt-4 text-center" role="alert">
-                            Cảm ơn bạn đã hỏi thăm. Thông tin bạn nhập sẽ được quản lý theo chính sách
-                            bảo vệ thông tin cá nhân của chúng tôi. Thông tin sẽ không được tiết lộ
-                            hoặc cung cấp cho bên thứ 3 nào. Để biết thêm chi tiết xem
-                            <a href="/privacy-policy" class="alert-link">"Chính sách tham khảo"</a>
+                        <div class="alert alert-info mt-4 text-center" role="alert"> Cảm ơn bạn đã
+                            hỏi thăm. Thông tin bạn nhập sẽ được quản lý theo chính sách bảo vệ
+                            thông tin cá nhân của chúng tôi. Thông tin sẽ không được tiết lộ hoặc
+                            cung cấp cho bên thứ 3 nào. Để biết thêm chi tiết xem <a
+                                href="/privacy-policy" class="alert-link">"Chính sách tham khảo"</a>
                         </div>
                     </div>
                 </section>
@@ -426,7 +688,8 @@
                                     </div>
                                     <div class="col-10">
                                         <p style="color: rgb(255, 255, 255); font-size: 16px;">
-                                            <span style="font-weight: 400;">Giờ làm việc</span><br />
+                                            <span style="font-weight: 400;">Giờ làm việc</span>
+                                            <br />
                                             <span style="font-weight: 500;">Mon-Fri: 9AM - 5PM</span>
                                         </p>
                                     </div>
@@ -444,7 +707,8 @@
                                     </div>
                                     <div class="col-10">
                                         <p style="color: rgb(255, 255, 255); font-size: 16px;">
-                                            <span style="font-weight: 400;">Số điện thoại</span><br />
+                                            <span style="font-weight: 400;">Số điện thoại</span>
+                                            <br />
                                             <span style="font-weight: 500;">(205) 484-9624</span>
                                         </p>
                                     </div>
@@ -462,7 +726,8 @@
                                     </div>
                                     <div class="col-10">
                                         <p style="color: rgb(255, 255, 255); font-size: 16px;">
-                                            <span style="font-weight: 400;">Địa chỉ công ty</span><br />
+                                            <span style="font-weight: 400;">Địa chỉ công ty</span>
+                                            <br />
                                             <span style="font-weight: 500;">Birmingham, AL</span>
                                         </p>
                                     </div>
@@ -479,24 +744,29 @@
         <field name="name">Thanks (Contact us)</field>
         <field name="type">qweb</field>
         <field name="url">/contactus-thank-you</field>
-        <field name="website_indexed" eval="False"/>
+        <field name="website_indexed" eval="False" />
         <field name="is_published">True</field>
         <field name="key">website.contactus_thanks</field>
         <field name="arch" type="xml">
             <t name="Thanks (Contact us)" t-name="website.contactus_thanks">
                 <t t-call="website.layout">
                     <div id="wrap" class="oe_structure oe_empty">
-                        <section class="s_text_block pt40 pb40 o_colored_level " data-snippet="s_text_block">
+                        <section class="s_text_block pt40 pb40 o_colored_level "
+                            data-snippet="s_text_block">
                             <div class="container s_allow_columns">
                                 <div class="row">
                                     <div class="col-lg-7 col-xl-6 me-lg-auto">
-                                        <span class="d-block fa fa-4x fa-thumbs-up mx-auto rounded-circle bg-primary"/><br/>
+                                        <span
+                                            class="d-block fa fa-4x fa-thumbs-up mx-auto rounded-circle bg-primary" />
+                                        <br />
                                         <h1 class="text-center">Thank You!</h1>
-                                        <div class="pb16 pt16 s_hr" data-snippet="s_hr" data-name="Separator">
-                                            <hr class="mx-auto border-top w-50 border-dark text-center"/>
+                                        <div class="pb16 pt16 s_hr" data-snippet="s_hr"
+                                            data-name="Separator">
+                                            <hr
+                                                class="mx-auto border-top w-50 border-dark text-center" />
                                         </div>
                                         <h5 class="text-center">
-                                            <span class="fa fa-check-circle"/>
+                                            <span class="fa fa-check-circle" />
                                             <span>Your message has been sent <b>successfully</b></span>
                                         </h5>
                                         <p class="text-center">We will get back to you shortly.</p>
@@ -504,16 +774,28 @@
                                     <div class="col-lg-4">
                                         <ul class="list-unstyled mb-0 ps-2">
                                             <li>My Company</li>
-                                            <li><i class="fa fa-map-marker fa-fw me-2"/><span class="o_force_ltr">3575 Fake Buena Vista Avenue</span></li>
-                                            <li><i class="fa fa-phone fa-fw me-2"/><span class="o_force_ltr">+1 555-555-5556</span></li>
-                                            <li><i class="fa fa-1x fa-fw fa-envelope me-2"/><span>info@yourcompany.example.com</span></li>
+                                            <li>
+                                                <i class="fa fa-map-marker fa-fw me-2" />
+                                                <span class="o_force_ltr">3575 Fake Buena Vista
+                                                    Avenue</span>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-phone fa-fw me-2" />
+                                                <span class="o_force_ltr">+1 555-555-5556</span>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-1x fa-fw fa-envelope me-2" />
+                                                <span>info@yourcompany.example.com</span>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </section>
                     </div>
-                    <input t-if='website.plausible_shared_key' type='hidden' class='js_plausible_push' data-event-name='Lead Generation' data-event-params='{"CTA": "Contact Us"}' />
+                    <input t-if='website.plausible_shared_key' type='hidden'
+                        class='js_plausible_push' data-event-name='Lead Generation'
+                        data-event-params='{"CTA": "Contact Us"}' />
                 </t>
             </t>
         </field>
@@ -594,15 +876,17 @@
         <t t-call="website.layout">
             <div id="wrap">
                 <div class="oe_structure">
-                    <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24" data-vcss="001" data-snippet="s_title" data-scroll-background-ratio="1">
-                        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;"/>
-                        <div class="o_we_bg_filter bg-black-50"/>
+                    <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24"
+                        data-vcss="001" data-snippet="s_title" data-scroll-background-ratio="1">
+                        <span class="s_parallax_bg oe_img_bg"
+                            style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;" />
+                        <div class="o_we_bg_filter bg-black-50" />
                         <div class="container">
                             <h1>About us</h1>
                         </div>
                     </section>
                 </div>
-                <div class="oe_structure"/>
+                <div class="oe_structure" />
             </div>
         </t>
     </template>
@@ -610,15 +894,17 @@
         <t t-call="website.layout">
             <div id="wrap">
                 <div class="oe_structure">
-                    <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24" data-vcss="001" data-snippet="s_title" data-scroll-background-ratio="1">
-                        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;"/>
-                        <div class="o_we_bg_filter bg-black-50"/>
+                    <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24"
+                        data-vcss="001" data-snippet="s_title" data-scroll-background-ratio="1">
+                        <span class="s_parallax_bg oe_img_bg"
+                            style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;" />
+                        <div class="o_we_bg_filter bg-black-50" />
                         <div class="container">
                             <h1>Services</h1>
                         </div>
                     </section>
                 </div>
-                <div class="oe_structure"/>
+                <div class="oe_structure" />
             </div>
         </t>
     </template>
@@ -626,15 +912,17 @@
         <t t-call="website.layout">
             <div id="wrap">
                 <div class="oe_structure">
-                    <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24" data-vcss="001" data-snippet="s_title" data-scroll-background-ratio="1">
-                        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;"/>
-                        <div class="o_we_bg_filter bg-black-50"/>
+                    <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24"
+                        data-vcss="001" data-snippet="s_title" data-scroll-background-ratio="1">
+                        <span class="s_parallax_bg oe_img_bg"
+                            style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;" />
+                        <div class="o_we_bg_filter bg-black-50" />
                         <div class="container">
                             <h1>Pricing</h1>
                         </div>
                     </section>
                 </div>
-                <div class="oe_structure"/>
+                <div class="oe_structure" />
             </div>
         </t>
     </template>
@@ -645,7 +933,8 @@
                     <div class="container">
                         <h1 class="text-left mb-4"
                             style="font-size: 32px; border-bottom: 1px solid #ccc; padding-bottom: 15px;">
-                            <strong>個人情報保護方針（プライバシーポリシー）</strong></h1>
+                            <strong>個人情報保護方針（プライバシーポリシー）</strong>
+                        </h1>
                         <p>私たち株式会社ジェイアイ（以下、「当社」）は、次のとおりプライバシーポリシー（以下、「本ポリシー」）を定めます。</p>
 
                         <h2 class="mt-5"
@@ -734,7 +1023,8 @@
                                     </div>
                                     <div class="col-10">
                                         <p style="color: rgb(255, 255, 255); font-size: 16px;">
-                                            <span style="font-weight: 400;">Giờ làm việc</span><br />
+                                            <span style="font-weight: 400;">Giờ làm việc</span>
+                                            <br />
                                             <span style="font-weight: 500;">Mon-Fri: 9AM - 5PM</span>
                                         </p>
                                     </div>
@@ -752,7 +1042,8 @@
                                     </div>
                                     <div class="col-10">
                                         <p style="color: rgb(255, 255, 255); font-size: 16px;">
-                                            <span style="font-weight: 400;">Số điện thoại</span><br />
+                                            <span style="font-weight: 400;">Số điện thoại</span>
+                                            <br />
                                             <span style="font-weight: 500;">(205) 484-9624</span>
                                         </p>
                                     </div>
@@ -770,7 +1061,8 @@
                                     </div>
                                     <div class="col-10">
                                         <p style="color: rgb(255, 255, 255); font-size: 16px;">
-                                            <span style="font-weight: 400;">Địa chỉ công ty</span><br />
+                                            <span style="font-weight: 400;">Địa chỉ công ty</span>
+                                            <br />
                                             <span style="font-weight: 500;">Birmingham, AL</span>
                                         </p>
                                     </div>
@@ -789,7 +1081,7 @@
         <field name="description">Info and stats about your company</field>
         <field name="iap_page_code">about_us</field>
         <field name="sequence">1</field>
-        <field name="page_view_id" ref="aboutus"/>
+        <field name="page_view_id" ref="aboutus" />
         <field name="icon">fa-building</field>
         <field name="menu_company">True</field>
         <field name="menu_sequence">50</field>
@@ -800,7 +1092,7 @@
         <field name="description">Description of your services offer</field>
         <field name="iap_page_code">our_services</field>
         <field name="sequence">3</field>
-        <field name="page_view_id" ref="our_services"/>
+        <field name="page_view_id" ref="our_services" />
         <field name="icon">fa-handshake-o</field>
         <field name="menu_sequence">30</field>
         <field name="feature_url">/our-services</field>
@@ -810,7 +1102,7 @@
         <field name="description">Designed to drive conversion</field>
         <field name="iap_page_code">pricing</field>
         <field name="sequence">4</field>
-        <field name="page_view_id" ref="pricing"/>
+        <field name="page_view_id" ref="pricing" />
         <field name="icon">fa-random</field>
         <field name="menu_sequence">35</field>
         <field name="feature_url">/pricing</field>
@@ -820,7 +1112,7 @@
         <field name="description">Explain how you protect privacy</field>
         <field name="iap_page_code">privacy_policy</field>
         <field name="sequence">5</field>
-        <field name="page_view_id" ref="privacy_policy"/>
+        <field name="page_view_id" ref="privacy_policy" />
         <field name="icon">fa-gavel</field>
         <field name="feature_url">/privacy</field>
     </record>
@@ -831,7 +1123,7 @@
         <field name="description">Blogging and posting relevant content</field>
         <field name="sequence">6</field>
         <field name="website_config_preselection">blog</field>
-        <field name="module_id" ref="base.module_website_blog"/>
+        <field name="module_id" ref="base.module_website_blog" />
         <field name="icon">fa-rss</field>
         <field name="menu_company">True</field>
         <field name="menu_sequence">40</field>
@@ -841,7 +1133,7 @@
         <field name="name">Success Stories</field>
         <field name="description">Share your best case studies</field>
         <field name="sequence">7</field>
-        <field name="module_id" ref="base.module_website_blog"/>
+        <field name="module_id" ref="base.module_website_blog" />
         <field name="icon">fa-star</field>
         <field name="menu_company">True</field>
         <field name="menu_sequence">45</field>
@@ -851,7 +1143,7 @@
         <field name="name">Career</field>
         <field name="description">Publish job offers and let people apply</field>
         <field name="sequence">8</field>
-        <field name="module_id" ref="base.module_website_hr_recruitment"/>
+        <field name="module_id" ref="base.module_website_hr_recruitment" />
         <field name="icon">fa-address-card</field>
     </record>
     <record id="feature_module_shop" model="website.configurator.feature">
@@ -859,7 +1151,7 @@
         <field name="description">Sell more with an eCommerce</field>
         <field name="sequence">9</field>
         <field name="website_config_preselection">online_store</field>
-        <field name="module_id" ref="base.module_website_sale"/>
+        <field name="module_id" ref="base.module_website_sale" />
         <field name="icon">fa-shopping-cart</field>
         <field name="menu_sequence">15</field>
         <field name="feature_url">/shop</field>
@@ -869,7 +1161,7 @@
         <field name="description">Publish on-site and online events</field>
         <field name="sequence">10</field>
         <field name="website_config_preselection">event</field>
-        <field name="module_id" ref="base.module_website_event_sale"/>
+        <field name="module_id" ref="base.module_website_event_sale" />
         <field name="icon">fa-ticket</field>
         <field name="menu_sequence">20</field>
         <field name="feature_url">/event</field>
@@ -878,7 +1170,7 @@
         <field name="name">Forum</field>
         <field name="description">Give visitors the information they need</field>
         <field name="sequence">11</field>
-        <field name="module_id" ref="base.module_website_forum"/>
+        <field name="module_id" ref="base.module_website_forum" />
         <field name="icon">fa-users</field>
         <field name="feature_url">/forum</field>
     </record>
@@ -886,7 +1178,7 @@
         <field name="name">Live Chat</field>
         <field name="description">Chat with visitors to improve traction</field>
         <field name="sequence">12</field>
-        <field name="module_id" ref="base.module_website_livechat"/>
+        <field name="module_id" ref="base.module_website_livechat" />
         <field name="icon">fa-comments</field>
     </record>
     <record id="feature_module_elearning" model="website.configurator.feature">
@@ -894,7 +1186,7 @@
         <field name="description">Share knowledge publicly or for a fee</field>
         <field name="sequence">13</field>
         <field name="website_config_preselection">elearning</field>
-        <field name="module_id" ref="base.module_website_slides"/>
+        <field name="module_id" ref="base.module_website_slides" />
         <field name="icon">fa-graduation-cap</field>
         <field name="menu_sequence">25</field>
         <field name="feature_url">/slides</field>
@@ -903,7 +1195,7 @@
         <field name="name">Stores Locator</field>
         <field name="description">A map and a listing of your stores</field>
         <field name="sequence">15</field>
-        <field name="module_id" ref="base.module_website_google_map"/>
+        <field name="module_id" ref="base.module_website_google_map" />
         <field name="icon">fa-map-marker</field>
     </record>
 
@@ -912,185 +1204,198 @@
         <record id="homepage_page" model="website.page">
             <field name="is_published">True</field>
             <field name="url">/</field>
-            <field name="view_id" ref="homepage"/>
+            <field name="view_id" ref="homepage" />
             <field name="track">True</field>
         </record>
         <record id="contactus_page" model="website.page">
             <field name="url">/contactus</field>
             <field name="is_published">True</field>
-            <field name="view_id" ref="contactus"/>
+            <field name="view_id" ref="contactus" />
+            <field name="track">True</field>
+        </record>
+        <record id="company_profile_page" model="website.page">
+            <field name="url">/company-profile</field>
+            <field name="is_published">True</field>
+            <field name="view_id" ref="website.company_profile" />
             <field name="track">True</field>
         </record>
         <record id="privacy_page" model="website.page">
             <field name="url">/privacy</field>
             <field name="is_published">True</field>
-            <field name="view_id" ref="privacy_policy"/>
+            <field name="view_id" ref="privacy_policy" />
             <field name="track">True</field>
         </record>
 
         <!-- Default Menu to store module menus for new website -->
         <record id="main_menu" model="website.menu">
-          <field name="name">Default Main Menu</field>
-          <field name="url">/default-main-menu</field>
+            <field name="name">Default Main Menu</field>
+            <field name="url">/default-main-menu</field>
         </record>
         <record id="menu_home" model="website.menu">
-            <field name="name">Home</field>
+            <field name="name">ホームページ</field>
             <field name="url">/</field>
-            <field name="page_id" ref="website.homepage_page"/>
-            <field name="parent_id" ref="website.main_menu"/>
+            <field name="page_id" ref="website.homepage_page" />
+            <field name="parent_id" ref="website.main_menu" />
             <field name="sequence" type="int">10</field>
         </record>
         <record id="menu_contactus" model="website.menu">
-            <field name="name">Contact us</field>
+            <field name="name">今すぐ連絡する</field>
             <field name="url">/contactus</field>
-            <field name="page_id" ref="website.contactus_page"/>
-            <field name="parent_id" ref="website.main_menu"/>
+            <field name="page_id" ref="website.contactus_page" />
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="sequence" type="int">60</field>
+        </record>
+        <record id="menu_company_profile" model="website.menu">
+            <field name="name">会社概要</field>
+            <field name="url">/company-profile</field>
+            <field name="page_id" ref="website.company_profile_page" />
+            <field name="parent_id" ref="website.main_menu" />
             <field name="sequence" type="int">60</field>
         </record>
         <record id="menu_privacy" model="website.menu">
-            <field name="name">Privacy Policy</field>
+            <field name="name">プライバシーポリシー</field>
             <field name="url">/privacy</field>
-            <field name="page_id" ref="website.privacy_page"/>
-            <field name="parent_id" ref="website.main_menu"/>
+            <field name="page_id" ref="website.privacy_page" />
+            <field name="parent_id" ref="website.main_menu" />
             <field name="sequence" type="int">60</field>
         </record>
 
         <!-- Default Website -->
         <record id="default_website" model="website">
             <field name="name">My Website</field>
-            <field name="company_id" ref="base.main_company"/>
-            <field name="user_id" ref="base.public_user"/>
+            <field name="company_id" ref="base.main_company" />
+            <field name="user_id" ref="base.public_user" />
         </record>
 
         <!-- Pre loaded images -->
         <record id="website.business_conference" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">business_conference.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/business_conference.jpg</field>
         </record>
         <record id="website.library_image_01" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">bridge.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/bridge.jpg</field>
         </record>
         <record id="website.library_image_02" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">deliver.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/deliver.jpg</field>
         </record>
         <record id="website.library_image_03" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">clock.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/clock.jpg</field>
         </record>
         <record id="website.library_image_04" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">manufacturing.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/manufacturing.jpg</field>
         </record>
         <record id="website.library_image_05" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">compass.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/compass.jpg</field>
         </record>
         <record id="website.library_image_06" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">gift.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/gift.jpg</field>
         </record>
         <record id="website.library_image_07" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">mobile_device.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/mobile_device.jpg</field>
         </record>
         <record id="website.library_image_08" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">mobile.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/mobile.jpg</field>
         </record>
         <record id="website.library_image_09" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">office.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/office.jpg</field>
         </record>
         <record id="website.library_image_10" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">ice_coffe.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/ice_coffe.jpg</field>
         </record>
         <record id="website.library_image_11" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">rocket.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/rocket.jpg</field>
         </record>
         <record id="website.library_image_12" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">sell.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/sell.jpg</field>
         </record>
         <record id="website.library_image_13" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">shop.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/shop.jpg</field>
         </record>
         <record id="website.library_image_14" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">sign.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/sign.jpg</field>
         </record>
         <record id="website.library_image_15" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">sweet.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/sweet.jpg</field>
         </record>
         <record id="website.library_image_16" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">wine.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/wine.jpg</field>
         </record>
         <record id="website.library_image_17" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">marketing.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/library/marketing.jpg</field>
         </record>
         <record id="website.library_image_18" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">firework.jpg</field>
             <field name="res_model">ir.ui.view</field>
             <field name="type">url</field>
@@ -1099,63 +1404,63 @@
 
         <!-- Website Builder Background Images -->
         <record id="website.s_background_image_01" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_background_image_01.jpg</field>
             <field name="type">url</field>
             <field name="res_model">ir.ui.view</field>
             <field name="url">/website/static/src/img/backgrounds/peak.jpg</field>
         </record>
         <record id="website.s_background_image_02" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_background_image_02.jpg</field>
             <field name="type">url</field>
             <field name="res_model">ir.ui.view</field>
             <field name="url">/website/static/src/img/backgrounds/la.jpg</field>
         </record>
         <record id="website.s_background_image_03" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_background_image_03.jpg</field>
             <field name="type">url</field>
             <field name="res_model">ir.ui.view</field>
             <field name="url">/website/static/src/img/backgrounds/panama-sky.jpg</field>
         </record>
         <record id="website.s_background_image_04" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_background_image_04.jpg</field>
             <field name="type">url</field>
             <field name="res_model">ir.ui.view</field>
             <field name="url">/website/static/src/img/backgrounds/cubes.jpg</field>
         </record>
         <record id="website.s_background_image_05" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_background_image_05.jpg</field>
             <field name="type">url</field>
             <field name="res_model">ir.ui.view</field>
             <field name="url">/website/static/src/img/backgrounds/building-profile.jpg</field>
         </record>
         <record id="website.s_background_image_06" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_background_image_06.jpg</field>
             <field name="type">url</field>
             <field name="res_model">ir.ui.view</field>
             <field name="url">/website/static/src/img/backgrounds/type.jpg</field>
         </record>
         <record id="website.s_background_image_07" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_background_image_07.jpg</field>
             <field name="type">url</field>
             <field name="res_model">ir.ui.view</field>
             <field name="url">/website/static/src/img/backgrounds/people.jpg</field>
         </record>
         <record id="website.s_background_image_08" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_background_image_08.jpg</field>
             <field name="type">url</field>
             <field name="res_model">ir.ui.view</field>
             <field name="url">/website/static/src/img/backgrounds/city.jpg</field>
         </record>
         <record id="website.s_background_image_09" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_background_image_09.jpg</field>
             <field name="type">url</field>
             <field name="res_model">ir.ui.view</field>
@@ -1164,7 +1469,7 @@
 
         <!-- Header default images (to be replaced by themes) -->
         <record id="website.header_image_1_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">header_image_1_default_image.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/header_image_1_default_image.jpg</field>
@@ -1172,463 +1477,496 @@
 
         <!-- Snippets' Default Images (to be replaced by themes) -->
         <record id="website.s_cover_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_cover_default_image.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_cover.jpg</field>
         </record>
         <record id="website.s_masonry_block_default_image_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_masonry_block_default_image_1.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_masonry_block_1.jpg</field>
         </record>
         <record id="website.s_masonry_block_default_image_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_masonry_block_default_image_2.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_picture.jpg</field>
         </record>
         <record id="website.s_media_list_default_image_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_media_list_default_image_1.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_media_list_1.jpg</field>
         </record>
         <record id="website.s_media_list_default_image_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_media_list_default_image_2.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_media_list_2.jpg</field>
         </record>
         <record id="website.s_media_list_default_image_3" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_media_list_default_image_3.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_media_list_3.jpg</field>
         </record>
         <record id="website.s_product_list_default_image_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_product_list_default_image_1.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/furniture.jpg</field>
         </record>
         <record id="website.s_product_list_default_image_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_product_list_default_image_2.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/clothes.jpg</field>
         </record>
         <record id="website.s_product_list_default_image_3" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_product_list_default_image_3.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/books.jpg</field>
         </record>
         <record id="website.s_product_list_default_image_4" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_product_list_default_image_4.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/essentials_oils.jpg</field>
         </record>
         <record id="website.s_product_list_default_image_5" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_product_list_default_image_5.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/services.jpg</field>
         </record>
         <record id="website.s_product_list_default_image_6" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_product_list_default_image_6.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/multimedia.jpg</field>
         </record>
         <record id="website.s_quotes_carousel_demo_image_0" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_quotes_carousel_image_0.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_carousel_1.jpg</field>
         </record>
         <record id="website.s_quotes_carousel_demo_image_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_quotes_carousel_image_01.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_quotes_carousel_1.jpg</field>
         </record>
         <record id="website.s_quotes_carousel_demo_image_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_quotes_carousel_image_02.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_quotes_carousel_2.jpg</field>
         </record>
         <record id="website.s_quotes_carousel_demo_image_3" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_quotes_carousel_image_3.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_team_member_3.png</field>
         </record>
         <record id="website.s_quotes_carousel_demo_image_4" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_quotes_carousel_image_4.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_team_member_2.png</field>
         </record>
         <record id="website.s_quotes_carousel_demo_image_5" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_quotes_carousel_image_5.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_team_member_4.png</field>
         </record>
         <record id="website.s_image_text_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_image_text_default_image.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_image_text.jpg</field>
         </record>
         <record id="website.s_text_image_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_text_image_default_image.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_text_image.jpg</field>
         </record>
         <record id="website.s_three_columns_default_image_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_three_columns_default_image_1.jpg</field>
             <field name="type">url</field>
             <field name="url">/web/image/website.library_image_11</field>
         </record>
         <record id="website.s_three_columns_default_image_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_three_columns_default_image_2.jpg</field>
             <field name="type">url</field>
             <field name="url">/web/image/website.library_image_13</field>
         </record>
         <record id="website.s_three_columns_default_image_3" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_three_columns_default_image_3.jpg</field>
             <field name="type">url</field>
             <field name="url">/web/image/website.library_image_07</field>
         </record>
         <record id="website.s_carousel_default_image_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_carousel_default_image_1.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_carousel_1.jpg</field>
         </record>
         <record id="website.s_carousel_default_image_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_carousel_default_image_2.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_carousel_2.jpg</field>
         </record>
         <record id="website.s_carousel_default_image_3" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_carousel_default_image_3.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_carousel_3.jpg</field>
         </record>
         <record id="website.s_picture_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_picture_default_image.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_picture.jpg</field>
         </record>
         <record id="website.s_banner_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_banner_default_image.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_banner.jpg</field>
         </record>
         <record id="website.s_parallax_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_parallax_default_image.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_parallax.jpg</field>
         </record>
         <record id="website.s_reference_demo_image_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_reference_demo_image_1.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_references_1.png</field>
         </record>
         <record id="website.s_reference_demo_image_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_reference_demo_image_2.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_references_2.png</field>
         </record>
         <record id="website.s_reference_demo_image_3" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_reference_demo_image_3.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_references_3.png</field>
         </record>
         <record id="website.s_reference_demo_image_4" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_reference_demo_image_4.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_references_4.png</field>
         </record>
         <record id="website.s_reference_demo_image_5" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_reference_demo_image_5.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_references_5.png</field>
         </record>
         <record id="website.s_reference_default_image_6" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_reference_default_image_6.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_references_6.png</field>
         </record>
         <record id="website.s_company_team_image_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_company_team_image_1.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_team_member_1.png</field>
         </record>
         <record id="website.s_company_team_image_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_company_team_image_2.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_team_member_2.png</field>
         </record>
         <record id="website.s_company_team_image_3" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_company_team_image_3.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_team_member_3.png</field>
         </record>
         <record id="website.s_company_team_image_4" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_company_team_image_4.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_team_member_4.png</field>
         </record>
         <record id="website.s_mega_menu_menu_image_menu_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_menu_image_menu_default_image.png</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_references_5.png</field>
         </record>
         <record id="website.s_mega_menu_thumbnails_default_image_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_thumbnails_default_image_1.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_1.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_1.jpg</field>
         </record>
         <record id="website.s_mega_menu_thumbnails_default_image_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_thumbnails_default_image_2.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_2.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_2.jpg</field>
         </record>
         <record id="website.s_mega_menu_thumbnails_default_image_3" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_thumbnails_default_image_3.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_3.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_3.jpg</field>
         </record>
         <record id="website.s_mega_menu_thumbnails_default_image_4" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_thumbnails_default_image_4.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_4.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_4.jpg</field>
         </record>
         <record id="website.s_mega_menu_thumbnails_default_image_5" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_thumbnails_default_image_5.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_5.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_5.jpg</field>
         </record>
         <record id="website.s_mega_menu_thumbnails_default_image_6" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_thumbnails_default_image_6.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_6.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_6.jpg</field>
         </record>
         <record id="website.s_mega_menu_thumbnails_default_image_7" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_thumbnails_default_image_7.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_7.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_7.jpg</field>
         </record>
         <record id="website.s_mega_menu_thumbnails_default_image_8" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_thumbnails_default_image_8.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_8.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_8.jpg</field>
         </record>
         <record id="website.s_mega_menu_thumbnails_default_image_9" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_thumbnails_default_image_9.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_9.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_9.jpg</field>
         </record>
         <record id="website.s_mega_menu_thumbnails_default_image_10" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_thumbnails_default_image_10.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_10.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_10.jpg</field>
         </record>
         <record id="website.s_mega_menu_thumbnails_default_image_11" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_thumbnails_default_image_11.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_11.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_11.jpg</field>
         </record>
         <record id="website.s_mega_menu_images_subtitles_default_image_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_images_subtitles_default_image_1.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_1.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_1.jpg</field>
         </record>
         <record id="website.s_mega_menu_images_subtitles_default_image_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_images_subtitles_default_image_2.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_2.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_2.jpg</field>
         </record>
         <record id="website.s_mega_menu_images_subtitles_default_image_3" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_images_subtitles_default_image_3.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_3.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_3.jpg</field>
         </record>
         <record id="website.s_mega_menu_images_subtitles_default_image_4" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_images_subtitles_default_image_4.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_4.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_4.jpg</field>
         </record>
         <record id="website.s_mega_menu_images_subtitles_default_image_5" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_images_subtitles_default_image_5.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_5.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_5.jpg</field>
         </record>
         <record id="website.s_mega_menu_images_subtitles_default_image_6" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_images_subtitles_default_image_6.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_6.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_6.jpg</field>
         </record>
         <record id="website.s_mega_menu_images_subtitles_default_image_7" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_images_subtitles_default_image_7.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_7.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_images_subtitles_default_image_7.jpg</field>
         </record>
         <record id="website.s_mega_menu_menus_logos_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_menus_logos_default_image.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_image.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_image.jpg</field>
         </record>
         <record id="website.s_mega_menu_menus_logos_default_logo_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_menus_logos_default_logo_1.png</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_1.png</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_1.png</field>
         </record>
         <record id="website.s_mega_menu_menus_logos_default_logo_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_menus_logos_default_logo_2.png</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_2.png</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_2.png</field>
         </record>
         <record id="website.s_mega_menu_menus_logos_default_logo_3" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_menus_logos_default_logo_3.png</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_3.png</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_3.png</field>
         </record>
         <record id="website.s_mega_menu_menus_logos_default_logo_4" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_menus_logos_default_logo_4.png</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_4.png</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_4.png</field>
         </record>
         <record id="website.s_mega_menu_menus_logos_default_logo_5" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_menus_logos_default_logo_5.png</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_5.png</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_5.png</field>
         </record>
         <record id="website.s_mega_menu_menus_logos_default_logo_6" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_menus_logos_default_logo_6.png</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_6.png</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_6.png</field>
         </record>
         <record id="website.s_mega_menu_cards_default_image_1" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_cards_default_image_1.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_1.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_1.jpg</field>
         </record>
         <record id="website.s_mega_menu_cards_default_image_2" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_cards_default_image_2.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_2.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_2.jpg</field>
         </record>
         <record id="website.s_mega_menu_cards_default_image_3" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_cards_default_image_3.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_3.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_3.jpg</field>
         </record>
         <record id="website.s_mega_menu_cards_default_image_4" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_cards_default_image_4.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_4.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_4.jpg</field>
         </record>
         <record id="website.s_mega_menu_cards_default_image_5" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_cards_default_image_5.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_5.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_5.jpg</field>
         </record>
         <record id="website.s_mega_menu_cards_default_image_6" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_cards_default_image_6.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_6.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_6.jpg</field>
         </record>
         <record id="website.s_mega_menu_cards_default_image_7" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_cards_default_image_7.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_7.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_7.jpg</field>
         </record>
         <record id="website.s_mega_menu_cards_default_image_8" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_mega_menu_cards_default_image_8.jpg</field>
             <field name="type">url</field>
-            <field name="url">/website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_8.jpg</field>
+            <field name="url">
+                /website/static/src/img/snippets_demo/s_mega_menu_cards_default_image_8.jpg</field>
         </record>
         <record id="website.s_product_catalog_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_product_catalog_default_image.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_product_catalog.jpg</field>
         </record>
         <record id="website.s_blockquote_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_blockquote_default_image.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_team_member_2.png</field>
         </record>
         <record id="website.s_blockquote_cover_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_blockquote_cover_default_image.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_blockquote_cover.jpg</field>
         </record>
         <record id="website.s_popup_default_image" model="ir.attachment">
-            <field name="public" eval="True"/>
+            <field name="public" eval="True" />
             <field name="name">s_popup_default_image.jpg</field>
             <field name="type">url</field>
             <field name="url">/website/static/src/img/snippets_demo/s_popup.jpg</field>
