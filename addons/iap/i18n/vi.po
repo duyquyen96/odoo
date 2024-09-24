@@ -155,8 +155,8 @@ msgid ""
 "The url that this service requested returned an error. Please contact the "
 "author of the app. The url it tried to contact was %s"
 msgstr ""
-"Địa chỉ URL mà dịch vụ này yêu cầu trả về một lỗi. Vui lòng liên hệ tác giả của "
-"ứng dụng. Địa chỉ URL mà nó đã cố gắng liên hệ là %s"
+"Dữ liệu từ URL mà dịch vụ này yêu cầu đã trả về một lỗi. Vui lòng liên hệ tác giả của "
+"ứng dụng. URL bị lỗi là %s"
 
 #. module: iap
 #. odoo-javascript
