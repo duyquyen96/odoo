@@ -13442,11 +13442,6 @@ msgid "Tax Exigibility"
 msgstr "Miễn thuế"
 
 #. module: account
-#: model:ir.actions.server,name:account.action_move_switch_invoice_to_credit_note
-msgid "Switch into invoice/credit note"
-msgstr "Chuyển thành hóa đơn/hoá đơn hoàn tiền"
-
-#. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_move_line_filter
 msgid "Tax Grid"
 msgstr "Lưới thuế"
