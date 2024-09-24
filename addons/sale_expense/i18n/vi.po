@@ -78,7 +78,7 @@ msgstr "Chi tiêu"
 #: code:addons/sale_expense/models/product_template.py:0
 #, python-format
 msgid "Expenses of this category may not be added to a Sales Order."
-msgstr "Chi tiêu của danh mục này không thể thêm vào Đơn bán."
+msgstr "Chi tiêu của danh mục này không thể thêm vào đơn bán."
 
 #. module: sale_expense
 #. odoo-python
