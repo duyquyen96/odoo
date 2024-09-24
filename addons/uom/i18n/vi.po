@@ -51,7 +51,7 @@ msgstr "Có hiệu lực"
 #. module: uom
 #: model_terms:ir.actions.act_window,help:uom.product_uom_form_action
 msgid "Add a new unit of measure"
-msgstr "Thêm một đơn vị đo lường mới"
+msgstr "Thêm một đơn vị tính mới"
 
 #. module: uom
 #: model_terms:ir.actions.act_window,help:uom.product_uom_categ_form_action
