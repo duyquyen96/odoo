@@ -3717,7 +3717,7 @@ msgstr "Số lượng đối tác đã tải phải lớn hơn 0"
 #: code:addons/point_of_sale/models/pos_config.py:0
 #, python-format
 msgid "Number of product loaded can not be 0"
-msgstr "Số sản phẩm đã tải không thể bằng 0"
+msgstr "Số lượng sản phẩm đã tải phải lớn hơn 0"
 
 #. module: point_of_sale
 #. odoo-javascript
