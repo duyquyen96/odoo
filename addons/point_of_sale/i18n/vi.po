@@ -6765,7 +6765,7 @@ msgid ""
 "Please finish the payment with the terminal or cancel it then remove the payment line."
 msgstr ""
 "Có ít nhất một thanh toán điện tử chưa được xử lý.\n"
-"Vui lòng hoàn tất thanh toán với thiết bị hoặc hủy thanh toán rồi loại bỏ dòng thanh toán."
+"Vui lòng hoàn tất thanh toán với thiết bị đầu cuối hoặc hủy thanh toán và sau đó xóa dòng thanh toán."
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
