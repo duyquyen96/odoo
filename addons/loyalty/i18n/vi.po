@@ -510,7 +510,7 @@ msgstr ""
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_card__message_needaction
 msgid "Action Needed"
-msgstr "Hành động cần thiết"
+msgstr "Tác vụ cần thiết"
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_mail__active
@@ -568,7 +568,7 @@ msgstr "Áp dụng cho"
 #: model_terms:ir.ui.view,arch_db:loyalty.loyalty_program_view_form
 #: model_terms:ir.ui.view,arch_db:loyalty.loyalty_program_view_search
 msgid "Archived"
-msgstr "Đã lưu"
+msgstr "Đã lưu trữ"
 
 #. module: loyalty
 #: model:ir.model.fields.selection,name:loyalty.selection__loyalty_mail__trigger__create
@@ -1026,7 +1026,7 @@ msgstr "Thẻ khách hàng thân thiết"
 #: code:addons/loyalty/models/loyalty_program.py:0
 #, python-format
 msgid "Fill in your eWallet, and use it to pay future orders."
-msgstr ""
+msgstr "Nạp vào ví điện tử của bạn và sử dụng nó để thanh toán các đơn hàng trong tương lai."
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_card__message_follower_ids
@@ -1449,7 +1449,7 @@ msgstr "Không thấy chương trình nào."
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_card__message_needaction_counter
 msgid "Number of Actions"
-msgstr "Số lượng hành động"
+msgstr "Số lượng tác vụ"
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_card__message_has_error_counter
@@ -1549,7 +1549,7 @@ msgstr "Biến thể sản phẩm"
 #. module: loyalty
 #: model:ir.model.fields,help:loyalty.field_loyalty_program__payment_program_discount_product_id
 msgid "Product used in the sales order to apply the discount."
-msgstr "Product used in the sales order to apply the discount."
+msgstr "Sản phẩm được dùng để áp dụng chiết khấu trên đơn bán."
 
 #. module: loyalty
 #: model:ir.model.fields,help:loyalty.field_loyalty_reward__discount_line_product_id
@@ -1557,8 +1557,8 @@ msgid ""
 "Product used in the sales order to apply the discount. Each reward has its "
 "own product for reporting purpose"
 msgstr ""
-"Sản phẩm được sử dụng trong đơn hàng để áp dụng giảm giá. Mỗi phần thưởng có"
-" sản phẩm riêng cho mục đích báo cáo"
+"Sản phẩm được dùng để áp dụng chiết khấu trên đơn bán. Mỗi phần thưởng có"
+" sản phẩm riêng sử dụng cho mục đích báo cáo"
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_program__trigger_product_ids
@@ -1959,7 +1959,7 @@ msgstr "Bạn không thể xóa một chương trình ở trạng thái hoạt �
 #: code:addons/loyalty/models/loyalty_reward.py:0
 #, python-format
 msgid "The reward description field cannot be empty."
-msgstr ""
+msgstr "Không được để trống trường mô tả phần thưởng."
 
 #. module: loyalty
 #. odoo-python
