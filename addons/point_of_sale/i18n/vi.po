@@ -6351,9 +6351,9 @@ msgid ""
 "from the point of sale has been saved in the attachments.<br/>Please contact"
 " your support service to assist you on restoring it"
 msgstr ""
-"Đơn hàng điểm bán hàng với mã tham chiếu %s đã được nhận bởi máy chủ, "
-"nhưng pha xử lý đơn hàng đã thất bại.<br/>Dữ liệu đã nhận từ điểm bán hàng "
-"đã được lưu trữ trong phụ lục.<br/>Vui lòng liên hệ dịch vụ hỗ trợ của bạn để "
+"Đơn bán POS với mã tham chiếu %s đã được nhận bởi máy chủ, "
+"nhưng việc xử lý đơn bán đã thất bại.<br/>Dữ liệu đã nhận từ điểm bán lẻ "
+"đã được lưu trữ trong phần đính kèm.<br/>Vui lòng liên hệ dịch vụ hỗ trợ của bạn để "
 "được hỗ trợ trong việc khôi phục nó"
 
 #. module: point_of_sale
