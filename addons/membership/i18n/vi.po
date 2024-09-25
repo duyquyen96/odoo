@@ -321,12 +321,12 @@ msgid ""
 "-Paying member: A member who has paid the membership fee."
 msgstr ""
 "Nó chỉ ra trạng thái thành viên.\n"
-"-Chưa phải thành viên: Một đối tác chưa đăng ký thành viên.\n"
-"-Thành viên đã hủy: Một thành viên đã hủy thẻ thành viên.\n"
-"-Thành viên cũ: Một thành viên mà thẻ đã hết hạn.\n"
-"-Thành viên đang chờ: Một thành viên đã đăng ký thẻ thành viên và hóa đơn sẽ được tạo.\n"
-"-Thành viên đã lên hoá đơn: Một thành viên đã có hóa đơn.\n"
-"-Thành viên đã thanh toán: Một thành viên đã thanh toán phí thẻ thành viên."
+"- Không phải thành viên: Một đối tác chưa đăng ký thành viên.\n"
+"- Thành viên đã hủy: Một thành viên đã hủy tư cách thành viên.\n"
+"- Thành viên cũ: Một thành viên đã hết hạn tư cách thành viên.\n"
+"- Thành viên đang chờ: Một thành viên đã đăng ký thành viên và đang chờ lập hóa đơn.\n"
+"- Thành viên đã lập hoá đơn: Một thành viên đã có hóa đơn.\n"
+"- Thành viên đã thanh toán: Một thành viên đã thanh toán phí thành viên."
 
 #. module: membership
 #: model:ir.model.fields,help:membership.field_membership_membership_line__state
