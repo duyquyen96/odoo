@@ -3710,7 +3710,7 @@ msgstr "Số tin nhắn bị gửi lỗi"
 #: code:addons/point_of_sale/models/pos_config.py:0
 #, python-format
 msgid "Number of partners loaded can not be 0"
-msgstr "Số đối tác đã tải không thể bằng 0"
+msgstr "Số lượng đối tác đã tải phải lớn hơn 0"
 
 #. module: point_of_sale
 #. odoo-python
