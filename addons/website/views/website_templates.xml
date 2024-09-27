@@ -909,9 +909,9 @@
                         <t t-set="_div_classes" t-valuef="my-auto ms-lg-3 align-self-lg-center"/>
                     </t>
                     <!-- Call To Action -->
-                    <t t-call="website.placeholder_header_call_to_action">
+                    <!-- <t t-call="website.placeholder_header_call_to_action">
                         <t t-set="_div_classes" t-valuef="d-none d-lg-block ms-3"/>
-                    </t>
+                    </t> -->
                 </div>
             </div>
         </t>
@@ -921,26 +921,20 @@
 <template id="template_header_contact_oe_structure_header_contact_1" inherit_id="website.template_header_contact" name="Template Header Contact (oe_structure_header_contact_1)">
     <xpath expr="//*[hasclass('oe_structure')][@id='oe_structure_header_contact_1']" position="replace">
         <div class="oe_structure oe_structure_solo" id="oe_structure_header_contact_1">
-            <section style="background-color: #213C8D; !important" class="s_text_block pt8 pb8 o_cc o_cc2" data-snippet="s_text_block" data-name="Text">
+            <section style="background-color: #213C8D; !important" class="s_text_block pt8 pb8 o_cc o_cc2 d-none d-md-block" data-snippet="s_text_block" data-name="Text">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 mb-3 mb-md-0">
-                            <div class="text-white text-center text-md-start" style="font-size: 18px; font-weight: 400;">
-                                <i class="fa fa-envelope fa-fw me-2"></i>
-                                <a href="mailto:info@yourcompany.example.com" class="text-white">info@yourcompany.example.com</a>
-                            </div>
+                    <div class="d-flex justify-content-center align-items-center flex-wrap">
+                        <div class="text-white text-center mx-4" style="font-size: 18px; font-weight: 400;">
+                            <i class="fa fa-envelope fa-fw me-2"></i>
+                            <a href="mailto:info@yourcompany.example.com" class="text-white">info@yourcompany.example.com</a>
                         </div>
-                        <div class="col-md-4 mb-3 mb-md-0">
-                            <div class="text-white text-center" style="font-size: 18px; font-weight: 400;">
-                                <i class="fa fa-phone fa-fw me-2"></i>
-                                <a href="tel:+1 555-555-5556" class="text-white">+1 555-555-5556</a>
-                            </div>
+                        <div class="text-white text-center mx-4" style="font-size: 18px; font-weight: 400; margin-left: 70px; margin-right: 70px;">
+                            <i class="fa fa-phone fa-fw me-2"></i>
+                            <a href="tel:+1 555-555-5556" class="text-white">+1 555-555-5556</a>
                         </div>
-                        <div class="col-md-4">
-                            <div class="text-white text-center text-md-end" style="font-size: 18px; font-weight: 400;">
-                                <i class="fa fa-map-marker fa-fw me-2"></i>
-                                <a href="#" class="text-white">〒110-0005 東京都台東区上野2-12-18</a>
-                            </div>
+                        <div class="text-white text-center mx-4" style="font-size: 18px; font-weight: 400;">
+                            <i class="fa fa-map-marker fa-fw me-2"></i>
+                            <a href="#" class="text-white">〒110-0005 東京都台東区上野2-12-18</a>
                         </div>
                     </div>
                 </div>
