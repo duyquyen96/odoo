@@ -3,7 +3,7 @@
 
 <template id="submenu" name="Submenu">
     <t t-set="show_dropdown" t-value="(submenu.is_mega_menu and submenu.is_visible) or submenu.child_id.filtered(lambda menu: menu.is_visible)"/>
-    <li t-if="submenu.is_visible and not (submenu.child_id or submenu.is_mega_menu)" t-attf-class="#{item_class or ''}" role="presentation">
+    <li t-if="submenu.is_visible and not (submenu.child_id or submenu.is_mega_menu)" t-attf-class="#{item_class or ''} me-4" role="presentation">
         <a t-att-href="submenu.clean_url()"
             t-attf-class="#{link_class or ''} #{'active' if submenu.clean_url() and unslug_url(request.httprequest.path) == unslug_url(submenu.clean_url()) else ''}"
             role="menuitem"
@@ -924,16 +924,16 @@
             <section style="background-color: #213C8D; !important" class="s_text_block pt8 pb8 o_cc o_cc2 d-none d-md-block" data-snippet="s_text_block" data-name="Text">
                 <div class="container">
                     <div class="d-flex justify-content-center align-items-center flex-wrap">
-                        <div class="text-white text-center mx-4" style="font-size: 18px; font-weight: 400;">
-                            <i class="fa fa-envelope fa-fw me-2"></i>
+                        <div class="text-white text-center mx-4" style="font-size: 16px; font-weight: 400;">
+                            <img src="/website/static/src/img/custom/sms.svg" alt="Email" class="me-2" style="width: 24px; height: 24px;"/>
                             <a href="mailto:info@yourcompany.example.com" class="text-white">info@yourcompany.example.com</a>
                         </div>
-                        <div class="text-white text-center mx-4" style="font-size: 18px; font-weight: 400; margin-left: 70px; margin-right: 70px;">
-                            <i class="fa fa-phone fa-fw me-2"></i>
+                        <div class="text-white text-center mx-4" style="font-size: 16px; font-weight: 400; margin-left: 70px; margin-right: 70px;">
+                            <img src="/website/static/src/img/custom/call.svg" alt="Phone" class="me-2" style="width: 24px; height: 24px;"/>
                             <a href="tel:+1 555-555-5556" class="text-white">+1 555-555-5556</a>
                         </div>
-                        <div class="text-white text-center mx-4" style="font-size: 18px; font-weight: 400;">
-                            <i class="fa fa-map-marker fa-fw me-2"></i>
+                        <div class="text-white text-center mx-4" style="font-size: 16px; font-weight: 400;">
+                            <img src="/website/static/src/img/custom/location.svg" alt="Location" class="me-2" style="width: 24px; height: 24px;"/>
                             <a href="#" class="text-white">〒110-0005 東京都台東区上野2-12-18</a>
                         </div>
                     </div>
