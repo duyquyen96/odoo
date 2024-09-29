@@ -460,7 +460,7 @@
                                     <h3 class="mb-4"
                                         style="font-size: 48px; font-weight: bold; color: #2F4672;">
                                         コンタクトフォーム</h3>
-                                    <form id="contactus_form" action="/website/form/" method="post"
+                                    <form id="contactus_form" action="/website/form/contact" method="post"
                                         enctype="multipart/form-data" class="o_mark_required"
                                         data-mark="*" data-model_name="mail.mail"
                                         data-success-mode="redirect"
@@ -471,7 +471,7 @@
                                         <div class="row mb-3">
                                             <div class="col-md-6 mb-3">
                                                 <input type="text" class="form-control border-0"
-                                                    name="company" placeholder="(任意)御社名"
+                                                    name="company_name" placeholder="(任意)御社名"
                                                     style="background-color: #FFFFFF;" />
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -480,19 +480,23 @@
                                                     style="background-color: #FFFFFF;" />
                                             </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control border-0"
-                                                name="furigana" placeholder="(必須)ふりがな" required=""
-                                                style="background-color: #FFFFFF;" />
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control border-0"
-                                                name="job_title" placeholder="(任意)身位"
-                                                style="background-color: #FFFFFF;" />
+                                        <div class="row mb-3">
+
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="form-control border-0"
+                                                    name="furigana" placeholder="(必須) ふりがな" required=""
+                                                    style="background-color: #FFFFFF;" />
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="form-control border-0"
+                                                    name="street" placeholder="(任意)身位"
+                                                    style="background-color: #FFFFFF;" />
+                                            </div>
+                                           
                                         </div>
                                         <div class="mb-3">
                                             <input type="email" class="form-control border-0"
-                                                name="email_from" placeholder="(必須) メールアドス"
+                                                name="email" placeholder="(必須) メールアドス"
                                                 required="" style="background-color: #FFFFFF;" />
                                         </div>
                                         <div class="mb-3">
@@ -501,7 +505,7 @@
                                                 style="background-color: #FFFFFF;" />
                                         </div>
                                         <div class="mb-3">
-                                            <input type="tel" class="form-control border-0"
+                                            <input type="text" class="form-control border-0"
                                                 name="fax" placeholder="(任意)FAX"
                                                 style="background-color: #FFFFFF;" />
                                         </div>
@@ -542,7 +546,7 @@
                 <section>
                     <img src="/website/static/src/img/custom/banner1.png" alt="About Us"
                         class="img-fluid rounded w-100"
-                        style="height: 33.33vw; object-fit: cover;" />
+                        style="height: 33.33vw; object-fit: cover;" loading="lazy"/>
                 </section>
 
                 <section class="s_text_image pt32 pb32 o_colored_level" data-snippet="s_text_image"
@@ -823,7 +827,7 @@
                         <p class="text-center mb-5" style="font-size: 16px; font-weight: 400;">Vui
                             lòng điền các thông tin được yêu cầu vào mẫu
                             bên dưới và nhấn nút gửi.</p>
-                        <form id="contactus_form" action="/website/form/" method="post"
+                        <form id="contactus_form" action="/website/form/contact" method="post"
                             enctype="multipart/form-data" class="o_mark_required" data-mark="*"
                             data-model_name="mail.mail" data-success-mode="redirect"
                             data-success-page="/contactus-thank-you" data-pre-fill="true">
@@ -1023,13 +1027,73 @@
                                         </div>
                                         <h5 class="text-center">
                                             <span class="fa fa-check-circle" />
-                                            <span>Your message has been sent <b>successfully</b></span>
+                                            <span>メッセージが送信されました <b>タンコン</b></span>
                                         </h5>
-                                        <p class="text-center">We will get back to you shortly.</p>
+                                        <p class="text-center">すぐにご連絡させていただきます。.</p>
                                     </div>
                                     <div class="col-lg-4">
                                         <ul class="list-unstyled mb-0 ps-2">
-                                            <li>My Company</li>
+                                            <li>私の会社</li>
+                                            <li>
+                                                <i class="fa fa-map-marker fa-fw me-2" />
+                                                <span class="o_force_ltr">3575 Fake Buena Vista
+                                                    Avenue</span>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-phone fa-fw me-2" />
+                                                <span class="o_force_ltr">+1 555-555-5556</span>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-1x fa-fw fa-envelope me-2" />
+                                                <span>info@yourcompany.example.com</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <input t-if='website.plausible_shared_key' type='hidden'
+                        class='js_plausible_push' data-event-name='Lead Generation'
+                        data-event-params='{"CTA": "Contact Us"}' />
+                </t>
+            </t>
+        </field>
+    </record>
+    <record id="website.contactus_error" model="website.page">
+        <field name="name">Thanks (Contact us)</field>
+        <field name="type">qweb</field>
+        <field name="url">/contactus-error</field>
+        <field name="website_indexed" eval="False" />
+        <field name="is_published">True</field>
+        <field name="key">website.contactus_error</field>
+        <field name="arch" type="xml">
+            <t name="Thanks (Contact us)" t-name="website.contactus_error">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty">
+                        <section class="s_text_block pt40 pb40 o_colored_level "
+                            data-snippet="s_text_block">
+                            <div class="container s_allow_columns">
+                                <div class="row">
+                                    <div class="col-lg-7 col-xl-6 me-lg-auto">
+                                        <span
+                                            class="d-block fa fa-4x fa-exclamation-circle mx-auto rounded-circle bg-warning" />
+                                        <br />
+                                        <h1 class="text-center">Error!</h1>
+                                        <div class="pb16 pt16 s_hr" data-snippet="s_hr"
+                                            data-name="Separator">
+                                            <hr
+                                                class="mx-auto border-top w-50 border-dark text-center" />
+                                        </div>
+                                        <h5 class="text-center">
+                                            <span class="fa fa-exclamation-circle" />
+                                            <span>エラーが発生しました。情報を再確認するか、サポートが必要な場合はご連絡ください。</span>
+                                        </h5>
+                                        <p class="text-center">私たちは迅速にサポートいたします。</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <ul class="list-unstyled mb-0 ps-2">
+                                            <li>私の会社</li>
                                             <li>
                                                 <i class="fa fa-map-marker fa-fw me-2" />
                                                 <span class="o_force_ltr">3575 Fake Buena Vista
@@ -1347,7 +1411,7 @@
                 <section class="pt32 pb32" style="background-color: #213C8D;">
                     <div class="container">
                         <h2 class="text-left mb-4"
-                            style="font-size: 48px; font-weight: bold; color: white; padding-top: 60px; padding-bottom: 60px;">
+                            style="font-size: 3rem; font-weight: bold; color: white; padding-top: 3.75rem; padding-bottom: 3.75rem;">
                             INVIAMで働く<br />4つのポイント</h2>
                         <div class="row mb-5">
                             <div class="col-lg-3 col-md-6 mb-4">
@@ -1630,7 +1694,9 @@
                         <p
                             style="font-size: 12px; font-weight: 400; text-align: center; margin-top: 24px; margin-bottom: 24px;">
                             素敵な出会いを楽しみにしています</p>
-                        <form>
+                        <form action="/website/form/recruitment" method="post">
+                            <input type="hidden" name="csrf_token"
+                            t-att-value="request.csrf_token()" />
                             <div class="row mt-4">
                                 <div class="row col-lg-8" style="border-right: 1px dashed #000;">
                                     <div class="col-lg-6">
@@ -1638,27 +1704,27 @@
                                             <label for="name" class="form-label"
                                                 style="font-size: 12px; font-weight: 400;">お名前(必須)</label>
                                             <input type="text" class="form-control" id="name"
-                                                required="required" />
+                                                required="required" name="name" />
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="email" class="form-label"
                                                 style="font-size: 12px; font-weight: 400;">
                                                 メールアドレス(必須)</label>
                                             <input type="email" class="form-control" id="email"
-                                                required="required" />
+                                                required="required" name="email" />
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="phone" class="form-label"
                                                 style="font-size: 12px; font-weight: 400;">電話番号(必須)</label>
                                             <input type="tel" class="form-control" id="phone"
-                                                required="required" />
+                                                required="required" name="phone" />
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="motivation" class="form-label"
                                                 style="font-size: 12px; font-weight: 400;">
                                                 志望動機・連絡事項など(必須)</label>
                                             <input class="form-control" id="motivation" rows="4"
-                                                required="required"></input>
+                                                required="required" name="additional_info"></input>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -1666,23 +1732,23 @@
                                             <label for="furigana" class="form-label"
                                                 style="font-size: 12px; font-weight: 400;">ふりがな(必須)</label>
                                             <input type="text" class="form-control" id="furigana"
-                                                required="required" />
+                                                required="required" name="furigana" />
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="age" class="form-label"
                                                 style="font-size: 12px; font-weight: 400;">年齢</label>
-                                            <input type="number" class="form-control" id="age" />
+                                            <input type="number" class="form-control" id="age" name="age" />
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="address" class="form-label"
                                                 style="font-size: 12px; font-weight: 400;">住所</label>
-                                            <input type="text" class="form-control" id="address" />
+                                            <input type="text" class="form-control" id="address" name="address" />
                                         </div>
-                                        <div class="form-group mb-3">
+                                        <!-- <div class="form-group mb-3">
                                             <label for="address" class="form-label"
                                                 style="font-size: 12px; font-weight: 400;">住所</label>
-                                            <input type="text" class="form-control" id="address1" />
-                                        </div>
+                                            <input type="text" class="form-control" id="address1" name="address" />
+                                        </div> -->
                                     </div>
                                     <div>
                                         <div>
@@ -1737,16 +1803,16 @@
                         </div>
                         <div class="row mt-4">
                             <div class="col-lg-4">
-                                <div class="row">
-                                    <div class="col-2 text-center">
-                                        <span class="fa-stack" style="width: 50px; height: 50px;">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-2">
+                                        <span class="fa-stack" style="width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center;">
                                             <i class="fa fa-circle fa-stack-2x"
                                                 style="color: #f39c12; font-size: 50px;"></i>
                                             <i class="fa fa-clock-o fa-stack-1x"
                                                 style="color: white; font-size: 24px; line-height: 50px;"></i>
                                         </span>
                                     </div>
-                                    <div class="col-10">
+                                    <div>
                                         <p style="color: rgb(255, 255, 255); font-size: 16px;">
                                             <span style="font-weight: 400;">営業時間</span>
                                             <br />
@@ -1756,16 +1822,16 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="row">
-                                    <div class="col-2 text-center">
-                                        <span class="fa-stack" style="width: 50px; height: 50px;">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-2">
+                                        <span class="fa-stack" style="width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center;">
                                             <i class="fa fa-circle fa-stack-2x"
                                                 style="color: #f39c12; font-size: 50px;"></i>
                                             <i class="fa fa-phone fa-stack-1x"
                                                 style="color: white; font-size: 24px; line-height: 50px;"></i>
                                         </span>
                                     </div>
-                                    <div class="col-10">
+                                    <div>
                                         <p style="color: rgb(255, 255, 255); font-size: 16px;">
                                             <span style="font-weight: 400;">電話番号</span>
                                             <br />
@@ -1775,20 +1841,20 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="row">
-                                    <div class="col-2 text-center">
-                                        <span class="fa-stack" style="width: 50px; height: 50px;">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-2">
+                                        <span class="fa-stack" style="width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center;">
                                             <i class="fa fa-circle fa-stack-2x"
                                                 style="color: #f39c12; font-size: 50px;"></i>
                                             <i class="fa fa-map-marker fa-stack-1x"
                                                 style="color: white; font-size: 24px; line-height: 50px;"></i>
                                         </span>
                                     </div>
-                                    <div class="col-10">
+                                    <div>
                                         <p style="color: rgb(255, 255, 255); font-size: 16px;">
                                             <span style="font-weight: 400;">所在地</span>
                                             <br />
-                                            <span style="font-weight: 500;">〒110-0005
+                                            <span style="font-weight: 500;">〒110-0005<br/>
                                                 東京都台東区上野2-12-18</span>
                                         </p>
                                     </div>

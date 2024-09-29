@@ -9,6 +9,10 @@ class Partner(models.Model):
     _name = 'res.partner'
     _inherit = ['res.partner', 'website.published.multi.mixin']
 
+    description = fields.Char(string='お問い合わせ内容', help='This field is used to store the contact description')
+    furigana = fields.Char(string='ふりがな', help='This field is used to store the furigana of the contact')
+    fax = fields.Char(string='FAX', help='This field is used to store the fax number of the contact')
+
     visitor_ids = fields.One2many('website.visitor', 'partner_id', string='Visitors')
 
     def google_map_img(self, zoom=8, width=298, height=298):

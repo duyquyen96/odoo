@@ -24,6 +24,39 @@ class WebsiteForm(http.Controller):
         # This is a workaround to don't add language prefix to <form action="/website/form/" ...>
         return ""
 
+    @http.route('/website/form/contact', type='http', auth="public", methods=['POST'], multilang=False)
+    def website_form_contact(self, **kwargs):
+        # This is a workaround to don't add language prefix to <form action="/website/form/" ...>
+        try:
+            # Prepare contact data, ensuring the correct field names
+            contact_data = {
+                'name': kwargs.get('name'),
+                'email': kwargs.get('email'),
+                'phone': kwargs.get('phone'),
+                'company_name': kwargs.get('company_name'),
+                'furigana': kwargs.get('furigana'),
+                'street': kwargs.get('street'),
+                'fax': kwargs.get('fax'),
+                'description': kwargs.get('description'),
+            }
+            # Insert the contact record
+            contact_record = request.env['res.partner'].sudo().create(contact_data)
+
+            # Create a message for the partner with the subject
+            # message = request.env['mail.message'].sudo().create({
+            #     'body': kwargs.get('description', ''),
+            #     'model': 'res.partner',
+            #     'res_id': contact_record.id,
+            #     'subject': kwargs.get('subject'),
+            #     'message_type': 'comment',
+            #     'subtype_id': request.env['ir.model.data'].sudo().get_object_reference('mail', 'mt_comment')[1],
+            # })
+
+            # Redirect to the thank you page
+            return request.redirect('/contactus-thank-you')
+        except Exception as e:
+            return request.redirect('/contactus-error')
+
     # Check and insert values from the form on the model <model>
     @http.route('/website/form/<string:model_name>', type='http', auth="public", methods=['POST'], website=True, csrf=False)
     def website_form(self, model_name, **kwargs):
