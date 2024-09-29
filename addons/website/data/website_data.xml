@@ -468,48 +468,48 @@
                                         data-pre-fill="true">
                                         <input type="hidden" name="csrf_token"
                                             t-att-value="request.csrf_token()" />
-                                        <div class="row mb-3">
-                                            <div class="col-md-6 mb-3">
+                                        <div class="row mb-4">
+                                            <div class="col-md-6">
                                                 <input type="text" class="form-control border-0"
                                                     name="company_name" placeholder="(任意)御社名"
                                                     style="background-color: #FFFFFF;" />
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-6">
                                                 <input type="text" class="form-control border-0"
                                                     name="name" placeholder="(必須) お名前" required=""
                                                     style="background-color: #FFFFFF;" />
                                             </div>
                                         </div>
-                                        <div class="row mb-3">
+                                        <div class="row mb-4">
 
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-6">
                                                 <input type="text" class="form-control border-0"
                                                     name="furigana" placeholder="(必須) ふりがな" required=""
                                                     style="background-color: #FFFFFF;" />
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-6">
                                                 <input type="text" class="form-control border-0"
                                                     name="street" placeholder="(任意)身位"
                                                     style="background-color: #FFFFFF;" />
                                             </div>
                                            
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-4">
                                             <input type="email" class="form-control border-0"
                                                 name="email" placeholder="(必須) メールアドス"
                                                 required="" style="background-color: #FFFFFF;" />
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-4">
                                             <input type="tel" class="form-control border-0"
                                                 name="phone" placeholder="(必須)TEL" required=""
                                                 style="background-color: #FFFFFF;" />
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-4">
                                             <input type="text" class="form-control border-0"
                                                 name="fax" placeholder="(任意)FAX"
                                                 style="background-color: #FFFFFF;" />
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-4">
                                             <textarea class="form-control border-0"
                                                 name="description" rows="4"
                                                 placeholder="(必須)お問い合わせ内容" required=""
@@ -723,79 +723,83 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Cột bên phải -->
-                            <div class="col-lg-6">
-                                <div class="p-5 rounded"
-                                    style="background-color: #E9E9E9; padding: 60px;">
-                                    <h3 class="mb-4"
-                                        style="font-size: 48px; font-weight: bold; color: #2F4672;">
-                                        コンタクトフォーム</h3>
-                                    <form id="contactus_form" action="/website/form/" method="post"
-                                        enctype="multipart/form-data" class="o_mark_required"
-                                        data-mark="*" data-model_name="mail.mail"
-                                        data-success-mode="redirect"
-                                        data-success-page="/contactus-thank-you"
-                                        data-pre-fill="true">
-                                        <input type="hidden" name="csrf_token"
-                                            t-att-value="request.csrf_token()" />
-                                        <div class="row mb-3">
-                                            <div class="col-md-6 mb-3">
-                                                <input type="text" class="form-control border-0"
-                                                    name="company" placeholder="(任意)御社名"
-                                                    style="background-color: #FFFFFF;" />
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <input type="text" class="form-control border-0"
-                                                    name="name" placeholder="(必須) お名前" required=""
-                                                    style="background-color: #FFFFFF;" />
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
+                           <!-- Cột bên phải -->
+                           <div class="col-lg-6">
+                            <div class="p-5 rounded"
+                                style="background-color: #E9E9E9; padding: 60px;">
+                                <h3 class="mb-4"
+                                    style="font-size: 48px; font-weight: bold; color: #2F4672;">
+                                    コンタクトフォーム</h3>
+                                <form id="contactus_form" action="/website/form/contact" method="post"
+                                    enctype="multipart/form-data" class="o_mark_required"
+                                    data-mark="*" data-model_name="mail.mail"
+                                    data-success-mode="redirect"
+                                    data-success-page="/contactus-thank-you"
+                                    data-pre-fill="true">
+                                    <input type="hidden" name="csrf_token"
+                                        t-att-value="request.csrf_token()" />
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
                                             <input type="text" class="form-control border-0"
-                                                name="furigana" placeholder="(必須)ふりがな" required=""
+                                                name="company_name" placeholder="(任意)御社名"
                                                 style="background-color: #FFFFFF;" />
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="col-md-6">
                                             <input type="text" class="form-control border-0"
-                                                name="job_title" placeholder="(任意)身位"
+                                                name="name" placeholder="(必須) お名前" required=""
                                                 style="background-color: #FFFFFF;" />
                                         </div>
-                                        <div class="mb-3">
-                                            <input type="email" class="form-control border-0"
-                                                name="email_from" placeholder="(必須) メールアドス"
-                                                required="" style="background-color: #FFFFFF;" />
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="tel" class="form-control border-0"
-                                                name="phone" placeholder="(必須)TEL" required=""
+                                    </div>
+                                    <div class="row mb-4">
+
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control border-0"
+                                                name="furigana" placeholder="(必須) ふりがな" required=""
                                                 style="background-color: #FFFFFF;" />
                                         </div>
-                                        <div class="mb-3">
-                                            <input type="tel" class="form-control border-0"
-                                                name="fax" placeholder="(任意)FAX"
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control border-0"
+                                                name="street" placeholder="(任意)身位"
                                                 style="background-color: #FFFFFF;" />
                                         </div>
-                                        <div class="mb-3">
-                                            <textarea class="form-control border-0"
-                                                name="description" rows="4"
-                                                placeholder="(必須)お問い合わせ内容" required=""
-                                                style="background-color: #FFFFFF;"></textarea>
-                                        </div>
-                                        <input type="hidden" name="subject"
-                                            value="Contact Form Submission" />
-                                        <input type="hidden" name="email_to"
-                                            t-att-value="res_company.email" />
-                                        <p class="mb-3" style="font-size: 16px; font-weight: 400;">(必須)プライバシー
-                                            ポリシー , プライバシーポリシーを確認し、内 容に同意します。</p>
-                                        <div>
-                                            <button type="submit"
-                                                class="btn btn-primary s_website_form_send"
-                                                style="font-size: 18px; font-weight: 400; color: white;">
-                                                情報の送信</button>
-                                        </div>
-                                    </form>
-                                </div>
+                                       
+                                    </div>
+                                    <div class="mb-4">
+                                        <input type="email" class="form-control border-0"
+                                            name="email" placeholder="(必須) メールアドス"
+                                            required="" style="background-color: #FFFFFF;" />
+                                    </div>
+                                    <div class="mb-4">
+                                        <input type="tel" class="form-control border-0"
+                                            name="phone" placeholder="(必須)TEL" required=""
+                                            style="background-color: #FFFFFF;" />
+                                    </div>
+                                    <div class="mb-4">
+                                        <input type="text" class="form-control border-0"
+                                            name="fax" placeholder="(任意)FAX"
+                                            style="background-color: #FFFFFF;" />
+                                    </div>
+                                    <div class="mb-4">
+                                        <textarea class="form-control border-0"
+                                            name="description" rows="4"
+                                            placeholder="(必須)お問い合わせ内容" required=""
+                                            style="background-color: #FFFFFF;"></textarea>
+                                    </div>
+                                    <input type="hidden" name="subject"
+                                        value="Contact Form Submission" />
+                                    <input type="hidden" name="email_to"
+                                        t-att-value="res_company.email" />
+                                    <p class="mb-3" style="font-size: 16px; font-weight: 400;">(必須)プライバシー
+                                        ポリシー , プライバシーポリシーを確認し、内 容に同意します。</p>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-primary s_website_form_send"
+                                            style="font-size: 18px; font-weight: 400; color: white;">
+                                            情報の送信</button>
+                                    </div>
+                                </form>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </section>
