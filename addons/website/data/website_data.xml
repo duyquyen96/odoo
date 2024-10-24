@@ -12,6 +12,7 @@
         <field name="url">/</field>
         <field name="target">self</field>
     </record>
+    
 
 
     <!-- Template for home and contactus -->
