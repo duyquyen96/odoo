@@ -19,6 +19,7 @@
         <t t-call="website.layout">
             <t t-set="pageName" t-value="'homepage'" />
             <div id="wrap" class="oe_structure oe_empty">
+
                 <section class="s_video_banner" data-snippet="s_video_banner">
                     <div class="container-fluid p-0">
                         <div class="s_video_banner_video_container position-relative w-100">
@@ -1772,7 +1773,7 @@
                                 }
                                 .right_block {
                                 margin-left: 24px;
-                                }   
+                                }
                                 }
                             </style>
                             <div class="row mt-4">
@@ -1945,11 +1946,624 @@
         </t>
     </template>
 
+    <!-- Template for service page -->
+    <template id="website.service" name="Service">
+        <t t-call="website.layout">
+            <t t-set="pageName" t-value="'service'" />
+            <div id="wrap" class="oe_structure oe_empty">
+                <section>
+                    <img src="/website/static/src/img/custom/banner2_1.png" alt="Service"
+                        class="img-fluid rounded w-100"
+                        style="height: 95vh; object-fit: cover;" />
+                </section>
+
+                <section class="other-services1 container">
+                    <style>
+                        .other-services1 h2 {
+                        text-align: center;
+                        color: #333;
+                        font-size: 24px;
+                        }
+
+                        .services-grid1 {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                        gap: 20px;
+                        justify-content: left;
+                        }
+                        .service-item1 {
+                        background-color: white;
+                        border-radius: 24px;
+                        padding: 32px;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        border: 3px solid #213C8D;
+                        text-align: center;
+                        }
+
+                        .service-item1 h3 {
+                        color: #4aa9e9;
+                        font-size: 24px;
+                        margin-bottom: 10px;
+                        }
+
+                        .service-item1 h4 {
+                        color: #333;
+                        font-size: 18px;
+                        margin-bottom: 24px;
+                        }
+
+                        .service-item1 p {
+                        color: #666;
+                        font-size: 14px;
+                        }
+                    </style>
+                    <div style="padding-top: 60px; padding-bottom: 60px;">
+                        <h2
+                            style="font-size: 48px; font-weight: bold; color: #213C8D; text-align: left; margin-bottom: 0;">
+                            ホテル清掃</h2>
+                        <p style="font-size: 18px; font-weight: 400; color: #000; text-align: left;">⭐️Hotel
+                            cleaning - OUR service Specializing in room cleaning</p>
+                    </div>
+                    <div class="services-grid1" style="padding-bottom: 60px;">
+                        <div class="service-item1 position-relative content-toggle"
+                            style="z-index: 1;">
+                            <span class="position-absolute"
+                                style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 128px; line-height: 100px; 
+                                   font-weight: bold; color: #E9ECF4; z-index: 0;">
+                                #01
+                            </span>
+                            <div class="position-relative" style="z-index: 1;">
+                                <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">ゴミ回収</h4>
+                                <p
+                                    style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;">
+                                    日本語をサポートできる</p>
+                            </div>
+                        </div>
+
+                        <div class="service-item1 position-relative content-toggle">
+                            <span class="position-absolute"
+                                style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 128px; line-height: 100px; 
+                                   font-weight: bold; color: #E9ECF4; z-index: 0;">
+                                #02
+                            </span>
+                            <div class="position-relative" style="z-index: 1;">
+                                <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                    ベットメイキング</h4>
+                                <p
+                                    style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;">
+                                    シーツの交換、整頓までお客様が快適に過ごれるようベットメイキングします。</p>
+                            </div>
+                        </div>
+                        <div class="service-item1 position-relative content-toggle">
+                            <span class="position-absolute"
+                                style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 128px; line-height: 100px; 
+                                   font-weight: bold; color: #E9ECF4; z-index: 0;">
+                                #03
+                            </span>
+                            <div class="position-relative" style="z-index: 1;">
+                                <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                    リネン交換</h4>
+                                <p
+                                    style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;">
+                                    お客様が使用されたタオル類、バスローブなどを新しく清潔な物と交換し、使いやすいよう配置します。</p>
+                            </div>
+                        </div>
+                        <div class="service-item1 position-relative content-toggle">
+                            <span class="position-absolute"
+                                style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 128px; line-height: 100px; 
+                                   font-weight: bold; color: #E9ECF4; z-index: 0;">
+                                #04
+                            </span>
+                            <div class="position-relative" style="z-index: 1;">
+                                <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">客室清掃</h4>
+                                <p
+                                    style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;">
+                                    テーブルやテレビ裏などの埃が溜まりやすい箇所もしっかり拭き上げます。またお部屋ごとに設置してある空気清浄機や冷蔵庫など細かな部分まで注意を払い清掃致します。</p>
+                            </div>
+                        </div>
+                        <div class="service-item1 position-relative content-toggle">
+                            <span class="position-absolute"
+                                style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 128px; line-height: 100px; 
+                                   font-weight: bold; color: #E9ECF4; z-index: 0;">
+                                #05
+                            </span>
+                            <div class="position-relative" style="z-index: 1;">
+                                <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">水回り</h4>
+                                <p
+                                    style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;">
+                                    洗面台やお風呂場やトイレなどの水回りを清掃致します。また水垢や目立った汚れなどは専用のクリーナーで落とし磨き上げます</p>
+                            </div>
+                        </div>
+                        <div class="service-item1 position-relative content-toggle">
+                            <span class="position-absolute"
+                                style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 128px; line-height: 100px; 
+                                   font-weight: bold; color: #E9ECF4; z-index: 0;">
+                                #06
+                            </span>
+                            <div class="position-relative" style="z-index: 1;">
+                                <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                    床面ルーム清掃</h4>
+                                <p
+                                    style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;">
+                                    ルーム内の床を掃除機掛け致します。細かな埃や食べかす、髪の毛などが残らないよう細心の注意を払い清掃致します。</p>
+                            </div>
+                        </div>
+                        <div class="service-item1 position-relative content-toggle">
+                            <span class="position-absolute"
+                                style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 128px; line-height: 100px; 
+                                   font-weight: bold; color: #E9ECF4; z-index: 0;">
+                                #07
+                            </span>
+                            <div class="position-relative" style="z-index: 1;">
+                                <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                    アメニティ補充</h4>
+                                <p
+                                    style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;">
+                                    シャンプー、リンス、ボディソープなどの分量を確認し適量になるよう補充致します。</p>
+                            </div>
+                        </div>
+                        <img src="/website/static/src/img/custom/wm.png" alt="Service"
+                            class="img-fluid rounded d-none d-md-block"
+                            style="position: absolute; bottom: 0; right: 0; z-index: 0;" />
+                    </div>
+                </section>
+                <section class="services2 container">
+                    <style>
+                        .services2 h2 {
+                        text-align: center;
+                        color: #333;
+                        font-size: 24px;
+                        }
+
+                        .services-grid2 {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                        gap: 20px;
+                        justify-content: left;
+                        }
+                        .service-item2 {
+                        background-color: white;
+                        border-radius: 24px;
+                        padding: 24px;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        border: 3px solid #213C8D;
+                        text-align: center;
+                        }
+
+                        .service-item2 h3 {
+                        color: #4aa9e9;
+                        font-size: 24px;
+                        margin-bottom: 10px;
+                        }
+
+                        .service-item2 h4 {
+                        color: #333;
+                        font-size: 18px;
+                        margin-bottom: 8px;
+                        }
+
+                        .service-item2 p {
+                        color: #666;
+                        font-size: 14px;
+                        }
+                    </style>
+                    <div style="padding-top: 60px; padding-bottom: 60px;">
+                        <h2
+                            style="font-size: 48px; font-weight: bold; color: #213C8D; text-align: left; margin-bottom: 0;">
+                            クオリティ</h2>
+                    </div>
+                    <div class="services-grid2" style="padding-bottom: 60px;">
+                        <div class="service-item2 position-relative content-toggle"
+                            style="z-index: 1; background-color: #213C8D; color: white;">
+                            <img src="/website/static/src/img/custom/icon_check.png" alt="Quality"
+                                class="img-fluid rounded"
+                                style="margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
+
+                            <div class="position-relative" style="z-index: 1;">
+                                <h4 style="font-size: 24px; font-weight: bold; color: white;">
+                                    厳格なクオリティチェック</h4>
+                                <p
+                                    style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: white;">
+                                    現場責任者であるチェカー、エリアマネージャーによる定期巡回により安定したクオリティの提供を約束します</p>
+                            </div>
+                        </div>
+
+                        <div class="service-item2 position-relative content-toggle"
+                            style="z-index: 1; background-color: #213C8D; color: white;">
+                            <img src="/website/static/src/img/custom/icon_check.png" alt="Quality"
+                                class="img-fluid rounded"
+                                style="margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
+
+                            <div class="position-relative" style="z-index: 1;">
+                                <h4 style="font-size: 24px; font-weight: bold; color: white;">
+                                    ホテル様ごとのオペレーション構築</h4>
+                                <p
+                                    style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: white;">
+                                    ホテル様により部屋数、間取り、タイプは異なります。最善で効率的なオペレーション構築をします</p>
+                            </div>
+                        </div>
+                        <div class="service-item2 position-relative content-toggle"
+                            style="z-index: 1; background-color: #213C8D; color: white;">
+                            <img src="/website/static/src/img/custom/icon_check.png" alt="Quality"
+                                class="img-fluid rounded"
+                                style="margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
+
+                            <div class="position-relative" style="z-index: 1;">
+                                <h4 style="font-size: 24px; font-weight: bold; color: white;">
+                                    ビジョンの共有</h4>
+                                <p
+                                    style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: white;">
+                                    ホテル運営において何に重点を置き、何を求められているのかホテル様ごとのコンセプトを理解し作業工程に落とし込み日々清掃致します。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section
+                    style="background-image: url('/website/static/src/img/custom/banner2_2.png'); background-size: cover;"
+                    class="container-fluid">
+                    <style>
+                        .services2 h2 {
+                        text-align: center;
+                        color: #333;
+                        font-size: 24px;
+                        }
+
+                        .services-grid2 {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                        gap: 20px;
+                        justify-content: left;
+                        }
+                        .service-item2 {
+                        background-color: white; /* Changed background color to white */
+                        border-radius: 24px;
+                        padding: 28px 32px;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        border: 3px solid #213C8D;
+                        text-align: center;
+                        }
+
+                        .service-item2 h3 {
+                        color: #4aa9e9;
+                        font-size: 24px;
+                        margin-bottom: 10px;
+                        }
+
+                        .service-item2 h4 {
+                        color: #333;
+                        font-size: 18px;
+                        margin-bottom: 8px;
+                        }
+
+                        .service-item2 p {
+                        color: #666;
+                        font-size: 14px;
+                        }
+                    </style>
+                    <div class="container" style="padding-bottom: 170px; padding-top: 170px;">
+                        <div style="padding-bottom: 40px;">
+                            <h2
+                                style="font-size: 48px; font-weight: bold; color: #213C8D; text-align: left; margin-bottom: 0;">
+                                コスト</h2>
+                            <p style="font-size: 18px; font-weight: normal; color: #213C8D;">こんなお客様におすすめ
+                                - 自社で採用、教育をする手が回らない。</p>
+                        </div>
+                        <div class="services-grid2">
+                            <div class="service-item2 position-relative content-toggle"
+                                style="z-index: 1; background-color: white; color: #213C8D;"> <!--
+                                Changed background color to white and text color to the previous
+                                background color -->
+                                <div class="position-relative" style="z-index: 1;">
+                                    <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                        自社で採用、教育をする手が回らない。</h4> <!-- Changed text color to the
+                                    previous background color -->
+                                    <p
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> <!--
+                                        Changed text color to the previous background color -->
+                                        Inviamは客室清掃の請負会社です。清掃オペレーションの構築から人材提供まで一貫してサービスを提供致します。稼働率アップを実現しホテルオーナー様の負担を軽減し生産性の向上に貢献致します。</p>
+                                </div>
+                            </div>
+                            <div class="service-item2 position-relative content-toggle"
+                                style="z-index: 1; background-color: white; color: #213C8D;"> <!--
+                                Changed background color to white and text color to the previous
+                                background color -->
+                                <div class="position-relative" style="z-index: 1;">
+                                    <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                        他社で外注していたが、不満がある</h4> <!-- Changed text color to the previous
+                                    background color -->
+                                    <p
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> <!--
+                                        Changed text color to the previous background color -->
+                                        →導入前の現地調査、ヒアリングで問題を顕在化します。その上で当社で解決出来るか考察させて頂き、お見積もり具体的なご提案をさせて頂きます。Inviamは利益重視では無く、ホテル運営を成功出来るかどうかに重点を置き誠実にお付き合い致します。</p>
+                                </div>
+                            </div>
+
+                            <div class="service-item2 position-relative content-toggle"
+                                style="z-index: 1; background-color: white; color: #213C8D;"> <!--
+                                Changed background color to white and text color to the previous
+                                background color -->
+                                <div class="position-relative" style="z-index: 1;">
+                                    <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                        新規事業拡大により清掃スタッフを増員したい</h4> <!-- Changed text color to the
+                                    previous background color -->
+                                    <p
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> <!--
+                                        Changed text color to the previous background color -->
+                                        ワンフロアからの試験的な導入から全室まで柔軟に対応致します。ホテルオーナー様ごとにご要望も異なりますのでお気軽にご相談下さい。</p>
+                                </div>
+                            </div>
+                            <div class="service-item2 position-relative content-toggle"
+                                style="z-index: 1; background-color: white; color: #213C8D;"> <!--
+                                Changed background color to white and text color to the previous
+                                background color -->
+                                <div class="position-relative" style="z-index: 1;">
+                                    <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                        清掃以外のサービスも重視したい</h4> <!-- Changed text color to the previous
+                                    background color -->
+                                    <p
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> <!--
+                                        Changed text color to the previous background color -->
+                                        は清掃会社ですので満足頂ける清掃クオリティを提供するのは当然ですが、ホテル運営に従事するスタッフとしてホスピタリティも大切にします。清潔感ある身だしなみ、お客様への挨拶などホテルのイメージに直結する清掃以外の付加価値向上に努めます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="background-color: #172B64;">
+                    <style>
+                        .services3 h2 {
+                        text-align: center;
+                        color: #333;
+                        font-size: 24px;
+                        }
+
+                        .services-grid3 {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                        gap: 20px;
+                        justify-content: left;
+                        }
+                        .service-item3 {
+                        background-color: white; /* Changed background color to white */
+                        border: 3px solid #213C8D;
+                        text-align: center;
+                        }
+
+                        .service-item3 h3 {
+                        color: #4aa9e9;
+                        font-size: 24px;
+                        margin-bottom: 10px;
+                        }
+
+                        .service-item3 h4 {
+                        color: #333;
+                        font-size: 18px;
+                        margin-bottom: 8px;
+                        }
+
+                        .service-item3 p {
+                        color: #666;
+                        font-size: 14px;
+                        }
+                    </style>
+                    <div class="container" style="padding-bottom: 60px; padding-top: 20px;">
+                        <img src="/website/static/src/img/custom/banner2_3.png" alt="Quality" class="img-fluid rounded" style="margin-bottom: 40px; display: block; margin-left: auto; margin-right: auto;"/>
+                        <div class="services-grid3">
+                            <div class="service-item3"
+                                style="background-color: white; color: #213C8D; border-radius: 12px;"> 
+                                <img src="/website/static/src/img/custom/icon_sv1.svg" alt="Quality" class="img-fluid rounded" style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;"/>
+                                <div style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+                                    <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                        水回りの清掃</h4> 
+                                    <p
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> 
+                                        キッチン、洗面所、トイレ、バスルームの各エリアに応じた清掃を行います。</p>
+                                </div>
+                            </div>
+                            <div class="service-item3"
+                                style="background-color: white; color: #213C8D; border-radius: 12px;"> 
+                                <img src="/website/static/src/img/custom/icon_sv2.svg" alt="Quality" class="img-fluid rounded" style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;"/>
+                                <div style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+                                    <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                        ベットメイク</h4> 
+                                    <p
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> 
+                                        新しいリネンに取り替え綺麗にベットメイクを仕上げます。枕の配置まで細かくこだわります。</p>
+                                </div>
+                            </div>
+
+                            <div class="service-item3"
+                                style="background-color: white; color: #213C8D; border-radius: 12px;"> 
+                                <img src="/website/static/src/img/custom/icon_sv3.svg" alt="Quality" class="img-fluid rounded" style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;"/>
+                                <div style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+                                    <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                        フロア清掃</h4> 
+                                    <p
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> 
+                                        フロアのタイプに合わせた清掃をします。掃除機やコロコロ、クイックルワイパーなどを使い分けます。</p>
+                                </div>
+                            </div>
+                            <div class="service-item3"
+                                style="background-color: white; color: #213C8D; border-radius: 12px;"> 
+                                <img src="/website/static/src/img/custom/icon_sv4.svg" alt="Quality" class="img-fluid rounded" style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;"/>
+                                <div style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+                                    <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
+                                        備品補充</h4> 
+                                    <p
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> 
+                                        洗剤、アメニティ類など消耗品の残量を確認し補充致します。必要であればアメニティサプライの導入も可能です。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="other-services" style="padding-bottom: 60px;">
+                    <style>
+                        @media (min-width: 768px) {
+                        .other-services h2 {
+                        text-align: center;
+                        color: #333;
+                        margin-bottom: 30px;
+                        font-size: 24px;
+                        }
+
+                        .services-row {
+                        }
+
+                        .service-item {
+                        background-color: white;
+                        border-radius: 24px;
+                        padding: 32px; /* Changed padding to 32px */
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        border: 3px solid #213C8D; /* Changed border style */
+                        text-align: center; /* Added text-align: center */
+                        height: 100%; /* Added height: 100% */
+                        }
+
+                        .service-item h3 {
+                        color: #5FC0DA;
+                        font-size: 48px;
+                        font-weight: bold;
+                        font-style: italic;
+                        margin-bottom: 10px;
+                        }
+                        .service-item h4 {
+                        color: #213C8D;
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                        }
+
+                        .service-item p {
+                        color: #213C8D;
+                        font-size: 18px;
+                        }
+                        }
+                        @media (max-width: 767px) {
+                        .other-services h2 {
+                        text-align: center;
+                        color: #333;
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                        }
+
+                        .services-row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 10px;
+                        }
+
+                        .service-item {
+                        background-color: white;
+                        border-radius: 20px;
+                        padding: 20px; /* Adjusted padding for mobile */
+                        box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+                        border: 2px solid #213C8D; /* Adjusted border style for mobile */
+                        text-align: center; /* Added text-align: center */
+                        height: 100%; /* Added height: 100% */
+                        }
+
+                        .service-item h3 {
+                        color: #5FC0DA;
+                        font-size: 36px;
+                        font-weight: bold;
+                        font-style: italic;
+                        margin-bottom: 8px;
+                        }
+                        .service-item h4 {
+                        color: #213C8D;
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin-bottom: 8px;
+                        }
+
+                        .service-item p {
+                        color: #213C8D;
+                        font-size: 16px;
+                        }
+                        }
+                    </style>
+                    <div class="container">
+                        <h2
+                            style="text-align: left; font-weight: bold; color: #213C8D; font-size: 48px; padding: 60px 0; margin-bottom: 0;">
+                            その他のサービス</h2>
+                        <div class="services-row">
+                            <div class="row" style="padding-bottom: 24px;">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="service-item">
+                                        <h3>01.</h3>
+                                        <h4>リネンサプライ</h4>
+                                        <p>サイズ・数量に応じてリネンを提します。オーナー様でご用意されてるリネンは近隣コインランドリーでの清掃も対応します</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <div class="service-item"
+                                        style="padding: 0 24px; display: flex; justify-content: center; align-items: center; height: 100%;">
+                                        <div>
+                                            <h3>02.</h3>
+                                            <h4>ゴミ回収</h4>
+                                            <p>提携している回収業者がいます。打ち合わせ時に決めさせて頂きます。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <div class="service-item">
+                                        <h3>03.</h3>
+                                        <h4>郵送物の受け取り</h4>
+                                        <p>ポストに溜まった郵便物を受け取りオーナー様に郵送致します。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="service-item">
+                                        <h3>04.</h3>
+                                        <h4>忘れ物の回収・異常内容の報告</h4>
+                                        <p>基本料金に含まれます。設備に異常がないか確認し清掃完了の報告をします。</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="service-item"
+                                        style="padding: 0 24px; display: flex; justify-content: center; align-items: center; height: 100%;">
+                                        <div>
+                                            <h3>05.</h3>
+                                            <h4>LINEでの清掃完了報告水回り</h4>
+                                            <p>清掃完了後オーナー様に報告させて頂きます。 この際お部屋の全体がわかるような写真をお送りします。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="service-item">
+                                        <h3>06.</h3>
+                                        <h4>LINEでの清掃完了報告</h4>
+                                        <p>清掃完了後オーナー様に報告させて頂きます。 この際お部屋の全体がわかるような写真をお送りします</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </t>
+    </template>
+
     <!-- Add recruitment page to configurator features -->
     <record id="recruitment_page" model="website.page">
         <field name="url">/recruitment</field>
         <field name="website_published">True</field>
         <field name="view_id" ref="recruitment" />
+    </record>
+    <!-- Add service page to configurator features -->
+    <record id="service_page" model="website.page">
+        <field name="url">/service</field>
+        <field name="website_published">True</field>
+        <field name="view_id" ref="service" />
     </record>
 
     <!-- Configurator page features -->
@@ -2114,6 +2728,14 @@
             <field name="name">募集</field>
             <field name="url">/recruitment</field>
             <field name="page_id" ref="website.recruitment_page" />
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="sequence" type="int">30</field>
+        </record>
+        <!-- Add service page to menu -->
+        <record id="menu_service" model="website.menu">
+            <field name="name">サービス</field>
+            <field name="url">/service</field>
+            <field name="page_id" ref="website.service_page" />
             <field name="parent_id" ref="website.main_menu" />
             <field name="sequence" type="int">30</field>
         </record>
