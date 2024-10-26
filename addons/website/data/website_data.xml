@@ -2200,6 +2200,65 @@
                     </div>
                 </section>
 
+                <section>
+                    <style>
+                        .custom-flex-container {
+                            display: flex;           /* Sử dụng Flexbox để sắp xếp theo chiều ngang */
+                            width: 100%;            /* Chiếm toàn bộ chiều rộng cha */
+                            background-color: #172B64;
+                            padding-bottom: 100px;
+                          }
+                          
+                          .fixed-width {
+                            width: 320px;           /* Chiều rộng cố định 320px */
+                            color: white;
+                            text-align: center;
+                            padding: 10px;
+                          }
+                          
+                          .remaining-width {
+                            flex: 1;                /* Chiếm hết phần còn lại của không gian */
+                            color: white;
+                            text-align: center;
+                          }
+                    </style>
+                    <div class="custom-flex-container">
+                        <div class="fixed-width" style="border-right: 3px solid white; border-bottom: 3px solid white; display: flex; justify-content: flex-end; align-items: flex-end;">
+                            <img src="/website/static/src/img/custom/image02.png" alt="Service Image" style="height: auto; object-fit: cover;" />
+                        </div>
+                        <div class="remaining-width">
+                        <div class="d-flex">
+                            <img src="/website/static/src/img/custom/image01.png" alt="Service Image" class="img-fluid rounded" style="width: 380px; height: auto; object-fit: cover;" />
+                            <div style="margin-right: 320px; text-align: left; padding-top: 60px;">
+                                <h3 style="font-size: 48px; font-weight: bold; color: #FFFFFF;">
+                                    スタッフ
+                                </h3>
+                                <h4 style="font-size: 24px; font-weight: 600; color: #FFFFFF;">
+                                    人材確保
+                                </h4>
+                                <hr style="color: white; margin-top: 24px; margin-bottom: 24px;" />
+                                <p style="font-size: 18px; color: #FFFFFF; font-weight: normal;">
+                                    協力先の日本人学校への就職支援コンサルティングを行い留学生スタッフを多く採用しております。清掃業は滞在期間が短くまた日本語でのコミュニケーション能力の低い学生でも働きやすい業態です。また国内における東南アジア圏の方々のコミュニティーにも精通しております。今までホテル清掃を下支えしてきたのは国内在中の外国人材であることは周知の事実です。ただコミュニケーションと文化の壁がある以上、外国人スタッフの教育育成が業界の課題でもあります。この課題を解決する為にInviamでは通訳スタッフ、教育プログラムを設けております。むしろ課題解決こそ出来れば質面目で勉な東南アジア圏の方々は清掃業と親和性が高いと考えており、この人的リソースこそがInviamの最大の強みです。</p>
+                                
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="col-4">
+                                <img src="/website/static/src/img/custom/banner3_1.png" alt="Service Image" class="img-fluid" style="width: 100%; height: auto; object-fit: cover; padding-left: 8px;" />
+                            </div>
+                            <div class="col-4">
+                                <img src="/website/static/src/img/custom/banner3_2.png" alt="Service Image" class="img-fluid" style="width: 100%; height: auto; object-fit: cover; padding-left: 8px;" />
+                            </div>
+                            <div class="col-4">
+                                <img src="/website/static/src/img/custom/banner3_3.png" alt="Service Image" class="img-fluid" style="width: 100%; height: auto; object-fit: cover; padding-left: 8px;" />
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                      
+
+                </section>
+
                 <section
                     style="background-image: url('/website/static/src/img/custom/banner2_2.png'); background-size: cover;"
                     class="container-fluid">
@@ -2242,7 +2301,17 @@
                         font-size: 14px;
                         }
                     </style>
-                    <div class="container" style="padding-bottom: 170px; padding-top: 170px;">
+                    <div
+                        style="
+                width: 370px;
+                height: 140px;
+                background-color: #172B64;
+                clip-path: polygon(50% 0, 100% 100%, 0 100%);
+                transform: rotate(180deg);
+                margin: 0 auto;
+                display: none;"
+                        class="d-none d-md-block"></div>
+                    <div class="container" style="padding-bottom: 170px; padding-top: 30px;">
                         <div style="padding-bottom: 40px;">
                             <h2
                                 style="font-size: 48px; font-weight: bold; color: #213C8D; text-align: left; margin-bottom: 0;">
@@ -2350,50 +2419,64 @@
                         }
                     </style>
                     <div class="container" style="padding-bottom: 60px; padding-top: 20px;">
-                        <img src="/website/static/src/img/custom/banner2_3.png" alt="Quality" class="img-fluid rounded" style="margin-bottom: 40px; display: block; margin-left: auto; margin-right: auto;"/>
+                        <img src="/website/static/src/img/custom/banner2_3.png" alt="Quality"
+                            class="img-fluid rounded"
+                            style="margin-bottom: 40px; display: block; margin-left: auto; margin-right: auto;" />
                         <div class="services-grid3">
                             <div class="service-item3"
-                                style="background-color: white; color: #213C8D; border-radius: 12px;"> 
-                                <img src="/website/static/src/img/custom/icon_sv1.svg" alt="Quality" class="img-fluid rounded" style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;"/>
-                                <div style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+                                style="background-color: white; color: #213C8D; border-radius: 12px;">
+                                <img src="/website/static/src/img/custom/icon_sv1.svg" alt="Quality"
+                                    class="img-fluid rounded"
+                                    style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;" />
+                                <div
+                                    style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
                                     <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
-                                        水回りの清掃</h4> 
+                                        水回りの清掃</h4>
                                     <p
-                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> 
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;">
                                         キッチン、洗面所、トイレ、バスルームの各エリアに応じた清掃を行います。</p>
                                 </div>
                             </div>
                             <div class="service-item3"
-                                style="background-color: white; color: #213C8D; border-radius: 12px;"> 
-                                <img src="/website/static/src/img/custom/icon_sv2.svg" alt="Quality" class="img-fluid rounded" style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;"/>
-                                <div style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+                                style="background-color: white; color: #213C8D; border-radius: 12px;">
+                                <img src="/website/static/src/img/custom/icon_sv2.svg" alt="Quality"
+                                    class="img-fluid rounded"
+                                    style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;" />
+                                <div
+                                    style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
                                     <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
-                                        ベットメイク</h4> 
+                                        ベットメイク</h4>
                                     <p
-                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> 
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;">
                                         新しいリネンに取り替え綺麗にベットメイクを仕上げます。枕の配置まで細かくこだわります。</p>
                                 </div>
                             </div>
 
                             <div class="service-item3"
-                                style="background-color: white; color: #213C8D; border-radius: 12px;"> 
-                                <img src="/website/static/src/img/custom/icon_sv3.svg" alt="Quality" class="img-fluid rounded" style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;"/>
-                                <div style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+                                style="background-color: white; color: #213C8D; border-radius: 12px;">
+                                <img src="/website/static/src/img/custom/icon_sv3.svg" alt="Quality"
+                                    class="img-fluid rounded"
+                                    style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;" />
+                                <div
+                                    style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
                                     <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
-                                        フロア清掃</h4> 
+                                        フロア清掃</h4>
                                     <p
-                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> 
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;">
                                         フロアのタイプに合わせた清掃をします。掃除機やコロコロ、クイックルワイパーなどを使い分けます。</p>
                                 </div>
                             </div>
                             <div class="service-item3"
-                                style="background-color: white; color: #213C8D; border-radius: 12px;"> 
-                                <img src="/website/static/src/img/custom/icon_sv4.svg" alt="Quality" class="img-fluid rounded" style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;"/>
-                                <div style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+                                style="background-color: white; color: #213C8D; border-radius: 12px;">
+                                <img src="/website/static/src/img/custom/icon_sv4.svg" alt="Quality"
+                                    class="img-fluid rounded"
+                                    style="display: block; margin-left: auto; margin-right: auto; padding-top: 52px; padding-bottom: 52px;" />
+                                <div
+                                    style="background-color: #EDFBFF; padding: 38px 24px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
                                     <h4 style="font-size: 24px; font-weight: bold; color: #213C8D;">
-                                        備品補充</h4> 
+                                        備品補充</h4>
                                     <p
-                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;"> 
+                                        style="font-size: 18px; font-weight: 400; margin-bottom: 0; color: #213C8D;">
                                         洗剤、アメニティ類など消耗品の残量を確認し補充致します。必要であればアメニティサプライの導入も可能です。</p>
                                 </div>
                             </div>
@@ -2404,6 +2487,9 @@
 
                 <section class="other-services" style="padding-bottom: 60px;">
                     <style>
+                        .custom-padding {
+                            padding: 0 24px;
+                        }
                         @media (min-width: 768px) {
                         .other-services h2 {
                         text-align: center;
@@ -2458,6 +2544,10 @@
                         justify-content: center;
                         gap: 10px;
                         }
+                        .custom-padding {
+                            padding: 24px 12px;
+                        }
+                        
 
                         .service-item {
                         background-color: white;
@@ -2502,9 +2592,9 @@
                                         <p>サイズ・数量に応じてリネンを提します。オーナー様でご用意されてるリネンは近隣コインランドリーでの清掃も対応します</p>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-12">
+                                <div class="col-md-3 col-sm-12 custom-padding">
                                     <div class="service-item"
-                                        style="padding: 0 24px; display: flex; justify-content: center; align-items: center; height: 100%;">
+                                        style="display: flex; justify-content: center; align-items: center; height: 100%;">
                                         <div>
                                             <h3>02.</h3>
                                             <h4>ゴミ回収</h4>
@@ -2528,9 +2618,9 @@
                                         <p>基本料金に含まれます。設備に異常がないか確認し清掃完了の報告をします。</p>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-4 col-sm-12 custom-padding">
                                     <div class="service-item"
-                                        style="padding: 0 24px; display: flex; justify-content: center; align-items: center; height: 100%;">
+                                        style="display: flex; justify-content: center; align-items: center; height: 100%; ">
                                         <div>
                                             <h3>05.</h3>
                                             <h4>LINEでの清掃完了報告水回り</h4>
