@@ -12,7 +12,6 @@
         <field name="url">/</field>
         <field name="target">self</field>
     </record>
-    
 
 
     <!-- Template for home and contactus -->
@@ -2228,7 +2227,7 @@
                         </div>
                         <div class="remaining-width">
                         <div class="d-flex">
-                            <img src="/website/static/src/img/custom/image01.png" alt="Service Image" class="img-fluid rounded" style="width: 380px; height: auto; object-fit: cover;" />
+                            <img src="/website/static/src/img/custom/image01.png" alt="Service Image" class="img-fluid rounded" style="width: 380px; height: auto;" />
                             <div style="margin-right: 320px; text-align: left; padding-top: 60px;">
                                 <h3 style="font-size: 48px; font-weight: bold; color: #FFFFFF;">
                                     スタッフ
@@ -2639,7 +2638,7 @@
                         </div>
                     </div>
                 </section>
-                
+
             </div>
         </t>
     </template>
