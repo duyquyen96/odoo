@@ -43,7 +43,7 @@
                     <div class="o_layer">
                     </div>
                     <div class="o_buttons text-center">
-                        <h3>Tính năng nâng cao, TH khách hàng cần sử dụng vui lòng liên hệ đội phát triển</h3>
+                        <h3>高度な機能が必要な場合は、開発チームにお問い合わせください</h3>
                         <a class="btn btn-primary" target="_blank"
                            href="https://www.odoo.com/documentation/16.0/applications/websites/website/reporting/plausible.html">
                             Connect Plausible

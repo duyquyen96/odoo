@@ -13,4 +13,24 @@
             </xpath>
         </field>
     </record>
+    <record id="res_partner_view_tree_inherit_website" model="ir.ui.view">
+        <field name="name">res.partner.view.tree.inherit.website</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="company_name"/>
+                <field name="street"/>
+                <field name="furigana"/>
+                <field name="fax"/>
+            </xpath>
+            <xpath expr="//field[@name='city']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='country_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>

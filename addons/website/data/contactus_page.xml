@@ -1,0 +1,180 @@
+<odoo>
+    <template id="website.contactus" name="Contact Us">
+        <t t-call="website.layout">
+            <t t-set="logged_partner"
+                t-value="request.env['website.visitor']._get_visitor_from_request().partner_id" />
+            <t t-set="contactus_form_values"
+                t-value="{
+                'email_to': res_company.email,
+                'name': request.params.get('name', ''),
+                'phone': request.params.get('phone', ''),
+                'email_from': request.params.get('email_from', ''),
+                'company': request.params.get('company', ''),
+                'subject': request.params.get('subject', ''),
+            }" />
+            <span class="hidden" data-for="contactus_form" t-att-data-values="contactus_form_values" />
+            <div id="wrap" class="oe_structure oe_empty" style="background-color: #EFEFEF;">
+                <section class="s_text_block pt40 pb40 o_colored_level" data-snippet="s_text_block">
+                    <div class="container s_allow_columns pt-32 pb-32"
+                        style="background-color: #FFFFFF; border-radius: 16px;">
+                        <h1 class="text-center text-4xl font-bold mb-4" style="color: #213C8D;">お問い合わせ</h1>
+                        <p class="text-center text-base font-normal mb-5">下記フォームに必要事項をご記入の上、送信ボタンを押してください。</p>
+                        <form id="contactus_form" action="/website/form/contact" method="post"
+                            enctype="multipart/form-data" class="o_mark_required" data-mark="*"
+                            data-model_name="mail.mail" data-success-mode="redirect"
+                            data-success-page="/contactus-thank-you" data-pre-fill="true">
+                            <input type="hidden" name="csrf_token"
+                                t-att-value="request.csrf_token()" />
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-4 mb-md-0">
+                                    <input type="text" class="form-control border-0" name="company_name"
+                                        placeholder="(任意)御社名" style="background-color: #EFEFEF;" />
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control border-0" name="name"
+                                        placeholder="(必須) お名前" required="" style="background-color: #EFEFEF;" />
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-4 mb-md-0">
+                                    <input type="text" class="form-control border-0" name="furigana"
+                                        placeholder="(必須) ふりがな" required="" style="background-color: #EFEFEF;" />
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control border-0" name="street"
+                                        placeholder="(任意)身位" style="background-color: #EFEFEF;" />
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" class="form-control border-0" name="email"
+                                    placeholder="(必須) メールアドス" required="" style="background-color: #EFEFEF;" />
+                            </div>
+                            <div class="mb-4">
+                                <input type="tel" class="form-control border-0" name="phone"
+                                    placeholder="(必須)TEL" required="" style="background-color: #EFEFEF;" />
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control border-0" name="fax"
+                                    placeholder="(任意)FAX" style="background-color: #EFEFEF;" />
+                            </div>
+                            <div class="mb-4">
+                                <textarea class="form-control border-0" name="description" rows="4"
+                                    placeholder="(必須)お問い合わせ内容" required="" style="background-color: #EFEFEF;"></textarea>
+                            </div>
+                            <input type="hidden" name="subject" value="Contact Form Submission" />
+                            <input type="hidden" name="email_to" t-att-value="res_company.email" />
+                            <p class="mb-3 text-base font-normal text-center">(必須)プライバシー ポリシー , <span style="color: #213C8D;">プライバシーポリシーを確認し、内容に同意します。</span></p>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary s_website_form_send text-lg font-normal"
+                                    style="color: white;">情報の送信</button>
+                            </div>
+                        </form>
+                        <div class="alert alert-info mt-4 text-center" role="alert">お問い合わせありがとうございます。
+                            ご入力いただいた情報は、当社のプライバシーポリシーに基づき管理されます。
+                            情報は第三者に開示・提供されることはありません。詳しくは<a
+                                href="/privacy" class="alert-link">「プライバシーポリシー」</a>をご覧ください。
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Thêm phần mới cho INVITAM -->
+                <section
+                    class="container s_cover parallax s_parallax_is_fixed bg-black-50 pt-52 pb-52 rounded-4"
+                    data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover"
+                    style="border-radius: 16px; margin-bottom: 50px;">
+                    <span class="s_parallax_bg oe_img_bg"
+                        style="background-image: url('/website/static/src/img/custom/banner1_2.png'); background-position: 50% 0;" />
+                    <div class="o_we_bg_filter bg-black-50" />
+                    <div class="container">
+                        <div class="row s_nb_column_fixed">
+                            <div class="col-lg-12 s_title pt-24 pb-24" data-name="Title">
+                                <h2 class="text-2xl text-center text-white">INVIAMは一緒に働く仲間を探しています！</h2>
+                                <h3 class="text-2xl text-center text-white">お気軽にお問い合わせください。</h3>
+                            </div>
+                            <div class="col-lg-12 pb-24 pt-24" data-name="Text">
+                                <div class="text-center">
+                                    <a href="/jobs" class="btn btn-lg text-lg"
+                                        style="background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(5px); color: white; border: 1px solid white;">採用情報はこちら</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="container-fluid s_cover parallax s_parallax_is_fixed bg-black-50 p-60"
+                    data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover">
+                    <span class="s_parallax_bg oe_img_bg"
+                        style="background-image: url('/website/static/src/img/custom/banner1_1.png'); background-position: 50% 0;" />
+                    <div class="o_we_bg_filter bg-black-50" />
+                    <div class="container">
+                        <div class="row s_nb_column_fixed">
+                            <div class="col-lg-12 s_title pt-24 pb-24" data-name="Title">
+                                <h2 class="text-3xl font-bold text-white text-left">お問い合わせ</h2>
+                                <p class="text-lg text-white text-left">ご質問やお問い合わせがございましたら、お気軽にご連絡ください。</p>
+                            </div>
+                        </div>
+                        <div class="row mt-32">
+                            <div class="col-lg-4">
+                                <div class="row">
+                                    <div class="col-2 text-center">
+                                        <span class="fa-stack" style="width: 50px; height: 50px;">
+                                            <i class="fa fa-circle fa-stack-2x"
+                                                style="color: #f39c12; font-size: 50px;"></i>
+                                            <i class="fa fa-clock-o fa-stack-1x"
+                                                style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-10">
+                                        <p class="text-base text-white">
+                                            <span class="font-normal">営業時間</span>
+                                            <br />
+                                            <span class="font-semibold">月-金: 9:00 - 17:00</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="row">
+                                    <div class="col-2 text-center">
+                                        <span class="fa-stack" style="width: 50px; height: 50px;">
+                                            <i class="fa fa-circle fa-stack-2x"
+                                                style="color: #f39c12; font-size: 50px;"></i>
+                                            <i class="fa fa-phone fa-stack-1x"
+                                                style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-10">
+                                        <p class="text-base text-white">
+                                            <span class="font-normal">電話番号</span>
+                                            <br />
+                                            <span class="font-semibold">０３－４４０５－５５５５</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="row">
+                                    <div class="col-2 text-center">
+                                        <span class="fa-stack" style="width: 50px; height: 50px;">
+                                            <i class="fa fa-circle fa-stack-2x"
+                                                style="color: #f39c12; font-size: 50px;"></i>
+                                            <i class="fa fa-map-marker fa-stack-1x"
+                                                style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-10">
+                                        <p class="text-base text-white">
+                                            <span class="font-normal">所在地</span>
+                                            <br />
+                                            <span class="font-semibold">〒110-0005 東京都台東区上野2-12-18</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>

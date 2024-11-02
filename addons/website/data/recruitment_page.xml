@@ -1,0 +1,478 @@
+<odoo>
+    <!-- Template for recruitment page -->
+    <template id="website.recruitment" name="Recruitment">
+        <t t-call="website.layout">
+            <t t-set="pageName" t-value="'recruitment'" />
+            <div id="wrap" class="oe_structure oe_empty">
+                <section>
+                    <img src="/website/static/src/img/custom/banner5.png" alt="Recruitment"
+                        class="img-fluid w-100"
+                        style="height: 33.33vw; object-fit: cover;" />
+                </section>
+                <section class="pt-32 pb-32" style="background-color: #213C8D;">
+                    <div class="container">
+                        <h2 class="text-4xl font-bold text-white pt-60 pb-60 mb-0">
+                            INVIAMで働く<br />4つのポイント</h2>
+                        <div class="row mb-60" style="overflow-x: auto; flex-wrap: nowrap; -ms-overflow-style: none; scrollbar-width: none; -webkit-overflow-scrolling: touch;">
+                            <div class="col-lg-3 col-md-6" style="min-width: 280px;">
+                                <div class="position-relative content-toggle active"
+                                    data-target="ct_1"
+                                    style="background-color: #FFFFFF; border-radius: 10px; overflow: hidden; border: 1px solid #EAECFF; cursor: pointer;">
+                                    <span class="position-absolute"
+                                        style="top: 0; right: 0; font-size: 100px; line-height: 100px; font-weight: bold; color: rgba(33, 60, 141, 0.1); padding: 15px;">
+                                        1</span>
+                                    <div class="p-3">
+                                        <img src="/website/static/src/img/custom/ic1.svg" alt="Icon"
+                                            class="mb-2"
+                                            style="width: 2em; height: 2em; padding: 6px; border-radius: 6px; background-color: #213C8D;" />
+                                        <h4 style="color: #213C8D;" class="text-lg font-semibold mb-1">No
+                                            Experience Required</h4>
+                                        <p style="color: #213C8D;" class="text-sm font-normal mb-0">
+                                            未経験でも安心!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6" style="min-width: 280px;">
+                                <div class="position-relative content-toggle" data-target="ct_2"
+                                    style="background-color: #213C8D; border-radius: 10px; overflow: hidden; border: 1px solid #EAECFF; cursor: pointer;">
+                                    <span class="position-absolute"
+                                        style="top: 0; right: 0; font-size: 100px; line-height: 100px; font-weight: bold; color: rgba(255, 255, 255, 0.1); padding: 15px;">
+                                        2</span>
+                                    <div class="p-3">
+                                        <img src="/website/static/src/img/custom/ic2.svg" alt="Icon"
+                                            class="mb-2"
+                                            style="width: 2em; height: 2em; padding: 6px; border-radius: 6px; background-color: #FFFFFF;" />
+                                        <h4 style="color: #FFFFFF;" class="text-lg font-semibold mb-1">Support
+                                            communication</h4>
+                                        <p style="color: #FFFFFF;" class="text-sm font-normal mb-0">
+                                            日本語をサポートできる</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6" style="min-width: 280px;">
+                                <div class="position-relative content-toggle" data-target="ct_3"
+                                    style="background-color: #213C8D; border-radius: 10px; overflow: hidden; border: 1px solid #EAECFF; cursor: pointer;">
+                                    <span class="position-absolute"
+                                        style="top: 0; right: 0; font-size: 100px; line-height: 100px; font-weight: bold; color: rgba(255, 255, 255, 0.1); padding: 15px;">
+                                        3</span>
+                                    <div class="p-3">
+                                        <img src="/website/static/src/img/custom/ic3.svg" alt="Icon"
+                                            class="mb-2"
+                                            style="width: 2em; height: 2em; padding: 6px; border-radius: 6px; background-color: #FFFFFF;" />
+                                        <h4 style="color: #FFFFFF;" class="text-lg font-semibold mb-1">Your
+                                            way of working</h4>
+                                        <p style="color: #FFFFFF;" class="text-sm font-normal mb-0">目的に合わせた
+                                            勤務が可能</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6" style="min-width: 280px;">
+                                <div class="position-relative content-toggle" data-target="ct_4"
+                                    style="background-color: #213C8D; border-radius: 10px; overflow: hidden; border: 1px solid #EAECFF; cursor: pointer;">
+                                    <span class="position-absolute"
+                                        style="top: 0; right: 0; font-size: 100px; line-height: 100px; font-weight: bold; color: rgba(255, 255, 255, 0.1); padding: 15px;">
+                                        4</span>
+                                    <div class="p-3">
+                                        <img src="/website/static/src/img/custom/ic4.svg" alt="Icon"
+                                            class="mb-2"
+                                            style="width: 2em; height: 2em; padding: 6px; border-radius: 6px; background-color: #FFFFFF;" />
+                                        <h4 style="color: #FFFFFF;" class="text-lg font-semibold mb-1">Easy
+                                            to work with</h4>
+                                        <p style="color: #FFFFFF;" class="text-sm font-normal mb-0">働きやすく
+                                            働き続けやすい</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="mb-60" style="border-top: 1px solid white;" />
+
+                        <div class="content-blocks">
+                            <div id="ct_1" class="content-block text-white">
+                                <p class="text-lg font-semibold">
+                                    現在弊社では、がっつり働きたい正社員の方を積極採用中です♪<br /> 合わせて、パートとアルバイトも募集しています。 </p>
+                                <ul class="text-lg font-semibold">
+                                    <li>子育てを卒業して時間に余裕ができて働きたいが、ブランクに不安を抱えていた方</li>
+                                    <li>シニア世代で、年齢制限��人間関係に不安を抱えていた方</li>
+                                    <li>
+                                        日本へ留学している外国人の方、学校のスケジュールに合わせて、学校の前や後や土日のみ働きたいなど出勤日に関するご希望なども相談可です。</li>
+                                </ul>
+                                <p class="text-lg font-semibold">
+                                    働く方の目標・目的に合わせ働き方を選択いただけます。1
+                                </p>
+                            </div>
+                            <div id="ct_2" class="content-block text-white" style="display: none;">
+                                <p class="text-lg font-semibold"> 弊社は、多様な働き方を支援しています。<br />
+                                    フルタイムからパートタイムまで、あなたのライフスタイルに合わせた働き方が可能です。 </p>
+                                <ul class="text-lg font-semibold">
+                                    <li>キャリアアップを目指す方</li>
+                                    <li>ワークライフバランスを重視する方</li>
+                                    <li>新しい分野にチャレンジしたい方</li>
+                                </ul>
+                                <p class="text-lg font-semibold">
+                                    あなたの成長と目標達成をサポートします。2
+                                </p>
+                            </div>
+                            <div id="ct_3" class="content-block text-white" style="display: none;">
+                                <p class="text-lg font-semibold"> 経験不問！未経験者も大歓迎です。<br />
+                                    充実した研修制度で、あなたのスキルアップをサポートします。 </p>
+                                <ul class="text-lg font-semibold">
+                                    <li>新卒者</li>
+                                    <li>転職を考えている方</li>
+                                    <li>第二の人生を始めたい方</li>
+                                </ul>
+                                <p class="text-lg font-semibold">
+                                    一緒に新しいキャリアを築いていきましょう。3
+                                </p>
+                            </div>
+                            <div id="ct_4" class="content-block text-white" style="display: none;">
+                                <p class="text-lg font-semibold"> 働きやすい環境づくりに力を入れています。<br />
+                                    社員の声を大切にし、常に改善を行っています。 </p>
+                                <ul class="text-lg font-semibold">
+                                    <li>充実した福利厚生</li>
+                                    <li>フレックスタイム制度</li>
+                                    <li>リモートワーク可能</li>
+                                </ul>
+                                <p class="text-lg font-semibold">
+                                    あなたの働きやすさを第一に考えています。4
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const toggles = document.querySelectorAll('.content-toggle');
+                        const blocks = document.querySelectorAll('.content-block');
+
+                        function updateToggleStyles(toggle, isActive) {
+                            const heading = toggle.querySelector('h4');
+                            const paragraph = toggle.querySelector('p');
+                            const image = toggle.querySelector('img');
+                            
+                            if (isActive) {
+                                toggle.style.backgroundColor = '#FFFFFF';
+                                heading.style.color = '#213C8D';
+                                paragraph.style.color = '#213C8D';
+                                image.style.backgroundColor = '#213C8D';
+                                toggle.classList.add('active');
+                            } else {
+                                toggle.style.backgroundColor = '#213C8D';
+                                heading.style.color = '#FFFFFF';
+                                paragraph.style.color = '#FFFFFF'; 
+                                image.style.backgroundColor = '#FFFFFF';
+                                toggle.classList.remove('active');
+                            }
+                        }
+
+                        function showContent(targetId) {
+                            blocks.forEach(block => {
+                                block.style.display = block.id === targetId ? 'block' : 'none';
+                            });
+                        }
+
+                        toggles.forEach(toggle => {
+                            toggle.addEventListener('click', function() {
+                                const targetId = this.getAttribute('data-target');
+                                
+                                toggles.forEach(t => {
+                                    updateToggleStyles(t, t === this);
+                                });
+                                
+                                showContent(targetId);
+                            });
+                        });
+
+                        // Initialize first content block as active
+                        showContent('ct_1');
+                    });
+                </script>
+
+                <section class="pt-32 pb-32" style="background-color: #F1F1F1;">
+                    <div class="container" style="padding: 24px; background-color: #FFFFFF;">
+                        <div
+                            style="background-color: #213C8D; color: white;text-align: center; padding: 8px;">
+                            <h2 class="text-2xl font-bold mb-2">
+                                募集要項</h2>
+                            <p class="text-base font-semibold">
+                                未経験者、お掃除好きな方大歓迎！丁寧にお教えしますので未経験の方でもご安心ください！スキル・経験を考慮し優遇します。</p>
+                        </div>
+                        <div>
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr>
+                                    <th
+                                        style="width: 20%; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #EAECFF; text-align: left; font-weight: bold; font-size: 14px;">
+                                        職種</th>
+                                    <td
+                                        style="padding: 10px; border-bottom: 1px solid #EAECFF; font-size: 12px;">
+                                        ホテル客室、民泊清掃</td>
+                                </tr>
+                                <tr>
+                                    <th
+                                        style="width: 20%; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #EAECFF; text-align: left; font-weight: bold; font-size: 14px;">
+                                        応募資格</th>
+                                    <td
+                                        style="padding: 10px; border-bottom: 1px solid #EAECFF; font-size: 12px;">未経験ok
+                                        経験者優遇有</td>
+                                </tr>
+                                <tr>
+                                    <th
+                                        style="width: 20%; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #EAECFF; text-align: left; font-weight: bold; font-size: 14px;">
+                                        雇用形態</th>
+                                    <td
+                                        style="padding: 10px; border-bottom: 1px solid #EAECFF; font-size: 12px;">
+                                        正社員・アルバイト・パート</td>
+                                </tr>
+                                <tr>
+                                    <th
+                                        style="width: 20%; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #EAECFF; text-align: left; font-weight: bold; font-size: 14px;">
+                                        給与</th>
+                                    <td
+                                        style="padding: 10px; border-bottom: 1px solid #EAECFF; font-size: 12px;">
+                                        正社員：<br /> 日給9,000円～15,000円※スキルや経験・資格により変動有 頑張りはしっかり評価します！<br /><br />
+                                        アルバイト・パート時給1,100円～ ※経験・資格により変動有<br />
+                                        日給9,000円～15,000円※スキルや経験・資格により変動有 頑張りはしっかり評価します！ </td>
+                                </tr>
+                                <tr>
+                                    <th
+                                        style="width: 20%; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #EAECFF; text-align: left; font-weight: bold; font-size: 14px;">
+                                        勤務時間</th>
+                                    <td
+                                        style="padding: 10px; border-bottom: 1px solid #EAECFF; font-size: 12px;">
+                                        シフト制</td>
+                                </tr>
+                                <tr>
+                                    <th
+                                        style="width: 20%; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #EAECFF; text-align: left; font-weight: bold; font-size: 14px;">
+                                        業務内容</th>
+                                    <td
+                                        style="padding: 10px; border-bottom: 1px solid #EAECFF; font-size: 12px;">
+                                        客室清掃、ベッドメイクやバス清掃、リネン回収、備品補充など</td>
+                                </tr>
+                                <tr>
+                                    <th
+                                        style="width: 20%; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #EAECFF; text-align: left; font-weight: bold; font-size: 14px;">
+                                        勤務地</th>
+                                    <td
+                                        style="padding: 10px; border-bottom: 1px solid #EAECFF; font-size: 12px;">
+                                        全国※ご自宅周辺又は、ご希望の地域になります。<br /> ※現場により異なります 出張あります。 </td>
+                                </tr>
+                                <tr>
+                                    <th
+                                        style="width: 20%; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #EAECFF; text-align: left; font-weight: bold; font-size: 14px;">
+                                        福利厚生</th>
+                                    <td
+                                        style="padding: 10px; border-bottom: 1px solid #EAECFF; font-size: 12px;">
+                                        研修プログラム有<br /> 交通費支給(上限あり)<br />
+                                        正社員：資格取得サポート、ユニホーム貸与、労災保険加入、損害賠償保険、(社内規定有) </td>
+                                </tr>
+                                <tr>
+                                    <th
+                                        style="width: 20%; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #EAECFF; text-align: left; font-weight: bold; font-size: 14px;">
+                                        その他</th>
+                                    <td
+                                        style="padding: 10px; border-bottom: 1px solid #EAECFF; font-size: 12px;">
+                                        髪型・髭自由</td>
+                                </tr>
+                            </table>
+                            <p class="text-sm font-normal mt-5">
+                                興味をお持ちいただいた方は、下記の応募フォームからご応募ください。ご応募いただいた後、選考の流れについてご連絡いたします。</p>
+                            <p class="text-sm font-normal">
+                                私たちと一緒にお客様に最高のサービスを提供し、心に残るホテルステイを創りましょう。皆さまからのご応募をよりお待ちしております</p>
+                        </div>
+                    </div>
+
+
+                </section>
+
+                <section class="pt-32 pb-32" style="background-color: #F1F1F1;">
+                    <div class="container" style="padding: 24px; background-color: #FFFFFF;">
+                        <div
+                            style="background-color: #213C8D; color: white; text-align: center; padding: 8px;">
+                            <h2 class="text-xl font-bold">応募フォーム</h2>
+                        </div>
+                        <p class="text-sm font-normal text-center mt-24 mb-24">
+                            素敵な出会いを楽しみにしています</p>
+                        <form action="/website/form/recruitment" method="post">
+                            <input type="hidden" name="csrf_token"
+                                t-att-value="request.csrf_token()" />
+                            <style>
+                                /* Mặc định cho màn hình nhỏ (mobile) */
+                                .custom-border {
+                                border-bottom: 1px dashed #000;
+                                }
+                                .right_block {
+                                margin-left: 0px;
+                                margin-top: 24px;
+                                }
+
+                                /* Khi màn hình lớn hơn 992px (large screens) */
+                                @media (min-width: 992px) {
+                                .custom-border {
+                                border-bottom: none;
+                                border-right: 1px dashed #000;
+                                }
+                                .right_block {
+                                margin-left: 24px;
+                                }
+                                }
+                            </style>
+                            <div class="row mt-4 justify-content-center">
+                                <div class="row col-12 col-lg-8 custom-border">
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="name" class="form-label text-sm font-normal">お名前(必須)</label>
+                                            <input type="text" class="form-control" id="name"
+                                                required="required" name="name" />
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="email" class="form-label text-sm font-normal">
+                                                メールアドレス(必須)</label>
+                                            <input type="email" class="form-control" id="email"
+                                                required="required" name="email" />
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="phone" class="form-label text-sm font-normal">電話番号(必須)</label>
+                                            <input type="tel" class="form-control" id="phone"
+                                                required="required" name="phone" />
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="motivation" class="form-label text-sm font-normal">
+                                                志望動機・連絡事項など(必須)</label>
+                                            <input class="form-control" id="motivation" rows="4"
+                                                required="required" name="additional_info"></input>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="furigana" class="form-label text-sm font-normal">ふりがな(必須)</label>
+                                            <input type="text" class="form-control" id="furigana"
+                                                required="required" name="furigana" />
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="age" class="form-label text-sm font-normal">年齢</label>
+                                            <input type="number" class="form-control" id="age"
+                                                name="age" />
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="address" class="form-label text-sm font-normal">住所</label>
+                                            <input type="text" class="form-control" id="address"
+                                                name="address" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="mb-24">
+                                            <small class="text-sm font-normal text-left">
+                                                ※履歴書は表示されませんので下記入力内容をよく確認の下送信ボタンを押してください。</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 right_block ">
+                                    <div>
+                                        <h5 class="text-sm">プライバシーポリシー</h5>
+                                        <p class="text-sm">お預かりした個人情報は、個人情報保護法に基づき管理致します
+                                            お問い合わせの際は下記の「個人情報保護方針」をご確認ください。</p>
+                                        <ul class="text-sm">
+                                            <li>個人情報の利用目的：お問い合わせへの回答にご利用させていただく場合があります。</li>
+                                            <li>第三者への開示：法人の同意がない限り、第三者に対してデータを開示・提供することはありません。</li>
+                                            <li>個人からの開示等の要請：個人情報の開示などをご希望される場合は、下記までご連絡ください。</li>
+                                            <li>公開された個人情報が事実と異なる場合、訂正や削除に応じます。</li>
+                                            <li>その他、保有する個人情報の取扱いに関して適用される法令、規範を遵守いたします。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="text-center mb-24 mt-24">
+                                    <button type="submit" class="btn text-lg font-bold"
+                                        style="background-color: #213C8D; color: white; padding-left: 90px; padding-right: 90px;">
+                                        送信</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </section>
+
+                <section class="pt-60 pb-60 container-fluid s_cover parallax s_parallax_is_fixed bg-black-50"
+                    data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover">
+                    <span class="s_parallax_bg oe_img_bg"
+                        style="background-image: url('/website/static/src/img/custom/banner1_1.png'); background-position: 50% 0;" />
+                    <div class="o_we_bg_filter bg-black-50" />
+                    <div class="container">
+                        <div class="row s_nb_column_fixed">
+                            <div class="col-lg-12 s_title pt16 pb16" data-name="Title">
+                                <h2 class="text-3xl font-bold text-white text-left">お問い合わせ</h2>
+                                <p class="text-lg text-white text-left">
+                                    ご質問やお問い合わせがございましたら、お気軽にご連絡ください。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-2">
+                                        <span class="fa-stack"
+                                            style="width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center;">
+                                            <i class="fa fa-circle fa-stack-2x"
+                                                style="color: #f39c12; font-size: 50px;"></i>
+                                            <i class="fa fa-clock-o fa-stack-1x"
+                                                style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <p class="text-base text-white">
+                                            <span class="font-normal">営業時間</span>
+                                            <br />
+                                            <span class="font-semibold">月-金: 9:00 - 17:00</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-2">
+                                        <span class="fa-stack"
+                                            style="width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center;">
+                                            <i class="fa fa-circle fa-stack-2x"
+                                                style="color: #f39c12; font-size: 50px;"></i>
+                                            <i class="fa fa-phone fa-stack-1x"
+                                                style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <p class="text-base text-white">
+                                            <span class="font-normal">電話番号</span>
+                                            <br />
+                                            <span class="font-semibold">０３－４４０５－５５５５</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-2">
+                                        <span class="fa-stack"
+                                            style="width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center;">
+                                            <i class="fa fa-circle fa-stack-2x"
+                                                style="color: #f39c12; font-size: 50px;"></i>
+                                            <i class="fa fa-map-marker fa-stack-1x"
+                                                style="color: white; font-size: 24px; line-height: 50px;"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <p class="text-base text-white">
+                                            <span class="font-normal">所在地</span>
+                                            <br />
+                                            <span class="font-semibold">〒110-0005<br />
+                                                東京都台東区上野2-12-18</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>

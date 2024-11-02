@@ -886,12 +886,12 @@
             <div id="top_menu_container" class="container">
                 <!-- Brand -->
                 <t t-call="website.placeholder_header_brand"/>
-                <!-- Navbar Toggler -->
-                <t t-call="website.navbar_toggler"/>
                 <!-- Call To Action -->
                 <t t-call="website.placeholder_header_call_to_action">
                     <t t-set="_div_classes" t-valuef="d-block d-lg-none"/>
                 </t>
+                <!-- Navbar Toggler -->
+                <t t-call="website.navbar_toggler"/>
                 <!-- Navbar Collapse -->
                 <div id="top_menu_collapse" class="collapse navbar-collapse ms-lg-3">
                     <t t-call="website.navbar_nav">
