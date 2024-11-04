@@ -47,7 +47,7 @@
     </template>
 
     <template id="language_selector" name="Language Selector">
-        <t t-nocache="The query strings can change for the same page and the same rendering."
+        <t t-if="False" t-nocache="The query strings can change for the same page and the same rendering."
            t-nocache-no_text="no_text"
            t-nocache-_div_classes="_div_classes"
            t-nocache-_btn_class="_btn_class"
