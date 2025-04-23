@@ -1507,7 +1507,7 @@ msgstr "Vượt quá lượng phân công lead hàng tháng"
 #: model_terms:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
 #: model_terms:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Expected Closing"
-msgstr "Đóng dự kiến"
+msgstr "Ngày chốt đơn dự kiến"
 
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.crm_lead_merge_summary
