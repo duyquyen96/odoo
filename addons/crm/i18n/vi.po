@@ -232,7 +232,7 @@ msgstr "<span class=\"oe_inline\">/</span>"
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.crm_case_kanban_view_leads
 msgid "<span class=\"text-bg-danger\">Lost</span>"
-msgstr "<span class=\"text-bg-danger\">Mất</span>"
+msgstr "<span class=\"text-bg-danger\">Thất bại</span>"
 
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.sales_team_form_view_in_crm
@@ -1113,7 +1113,7 @@ msgstr "Tạo tiềm năng"
 #. module: crm
 #: model_terms:ir.actions.act_window,help:crm.crm_lost_reason_action
 msgid "Create a Lost Reason"
-msgstr "Tạo lý do mất"
+msgstr "Tạo lý do Thất bại"
 
 #. module: crm
 #: model_terms:ir.actions.act_window,help:crm.crm_recurring_plan_action
@@ -2288,7 +2288,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 #: model_terms:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Lost"
-msgstr "Mất"
+msgstr "Thất bại"
 
 #. module: crm
 #. odoo-python
@@ -2364,29 +2364,29 @@ msgstr "Thủ công"
 #: model:ir.actions.act_window,name:crm.crm_lead_lost_action
 #, python-format
 msgid "Mark Lost"
-msgstr "Đánh dấu là mất"
+msgstr "Đánh dấu thất bại"
 
 #. module: crm
 #. odoo-python
 #: code:addons/crm/models/crm_lead.py:0
 #, python-format
 msgid "Mark Won"
-msgstr "Đánh dấu là đạt"
+msgstr "Đánh dấu thành công"
 
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.crm_lead_lost_view_form
 msgid "Mark as Lost"
-msgstr "Đánh dấu là mất"
+msgstr "Đánh dấu thất bại"
 
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.crm_lead_view_form
 msgid "Mark as lost"
-msgstr "Đánh dấu là mất"
+msgstr "Đánh dấu thất bại"
 
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.crm_lead_view_form
 msgid "Mark as won"
-msgstr "Đánh dấu là đạt"
+msgstr "Đánh dấu thành công"
 
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.crm_lead_view_form
@@ -2826,7 +2826,7 @@ msgstr "Cơ hội mở"
 #. module: crm
 #: model:ir.model,name:crm.model_crm_lost_reason
 msgid "Opp. Lost Reason"
-msgstr "Lý do mất"
+msgstr "Lý do thất bại"
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.crm_case_form_view_salesteams_opportunity
