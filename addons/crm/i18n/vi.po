@@ -2371,7 +2371,7 @@ msgstr "Đánh dấu thất bại"
 #: code:addons/crm/models/crm_lead.py:0
 #, python-format
 msgid "Mark Won"
-msgstr "Đánh dấu thành công"
+msgstr "Đánh dấu là đạt"
 
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.crm_lead_lost_view_form
