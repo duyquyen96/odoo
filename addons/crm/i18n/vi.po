@@ -1113,7 +1113,7 @@ msgstr "Tạo tiềm năng"
 #. module: crm
 #: model_terms:ir.actions.act_window,help:crm.crm_lost_reason_action
 msgid "Create a Lost Reason"
-msgstr "Tạo lý do Thất bại"
+msgstr "Tạo lý do thất bại"
 
 #. module: crm
 #: model_terms:ir.actions.act_window,help:crm.crm_recurring_plan_action
