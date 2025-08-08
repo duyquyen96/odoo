@@ -73,6 +73,11 @@ export class NavigableList extends Component {
 
     selectOption(ev, index, params = {}) {
         const option = this.props.options[index];
+        // Hotfix code note to avoid loss when merging upstream
+        if (!option) {
+            this.close();
+            return;
+        }
         if (option.unselectable) {
             this.close();
             return;
